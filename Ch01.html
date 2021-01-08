@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Bmarketo - Minimal E-commerce Html Template</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- preloader area end -->
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">HOME</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">HOME 01</a></li>
+                                <li><a href="index-2.html">HOME 02</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">PRODUCTS</a>
+                            <ul class="sub-menu">
+                                <li><a href="product.html">PRODUCTS 01</a></li>
+                                <li><a href="product-details.html">PRODUCTS DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">PAGES</a>
+                            <ul class="sub-menu">
+                                <li><a href="cart.html">CART</a></li>
+                                <li><a href="checkout.html">CHECKOUT</a></li>
+                                <li><a href="product.html">PRODUCTS 01</a></li>
+                                <li><a href="product-details.html">PRODUCTS DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">BLOG</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog.html">BLOG 01</a></li>
+                                <li><a href="blog-details.html">BLOG DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <div class="breadcrumb-area" style="background-image:url('assets/img/breadcrumb/1.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <div class="section-title text-center">
+                            <h1 class="page-title">BLOG SINGLE</h1>
+                            <ul class="page-list">
+                                <li><a href="index.html">HOME</a></li>
+                                <li>BLOG DETAILS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- single-blog-Area Start-->
+    <section class="single-blog-area pd-top-80 pd-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog-details-inner">
+                        <div class="thumb mb-4">
+                            <img src="assets/img/blog/1b.png" alt="img">
+                        </div>
+                        <div class="blog-details-wrap">
+                            <div class="meta">
+                                <span class="author">
+                                    <a href="#"><i class="fas fa-user" aria-hidden="true"></i>
+                                    Admin</a>
+                                </span>
+                                <span class="date">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    15/10/2021
+                                </span>
+                            </div>
+							<h2>[ 基本情况 ]</h2>
+							<h3>依赖库</h3>
+							<figure><table>
+							<thead>
+							<tr><th>库名字</th><th>备注</th></tr></thead>
+							<tbody><tr><td>os</td><td>系统操作</td></tr><tr><td>re</td><td>正则表达式</td></tr><tr><td><del>csv</del></td><td>excel数据读写</td></tr><tr><td><del>pygame</del></td><td>多媒体相关</td></tr><tr><td>requests</td><td>联网，支持QQ上的所有操作</td></tr><tr><td>json</td><td>包装http请求</td></tr><tr><td>gfun_air</td><td>功能集(自建库)</td></tr><tr><td>spider</td><td>一些用到网页的功能（自建库）</td></tr></tbody>
+							</table></figure>
+							<h3>依赖文件</h3>
+							<figure><table>
+							<thead>
+							<tr><th>文件名</th><th>备注</th></tr></thead>
+							<tbody><tr><td>logs/XXX.log</td><td>聊天记录日志文件(由cqhttp提供)</td></tr><tr><td>readed.temp</td><td>记录最新信息是否已读，临时文件</td></tr></tbody>
+							</table></figure>
+							<h3>基本文件结构</h3>
+							<figure><table>
+							<thead>
+							<tr><th>文件名</th><th>注释</th></tr></thead>
+							<tbody><tr><td>go-cqhttp.exe</td><td>【平台】将QQ与http-api连接起来的工具，负责<strong>通讯</strong>。基于Go语言开发。</td></tr><tr><td>qq2gina.py</td><td>【核心】担任所有逻辑处理的python脚本，即<strong>大脑</strong>。</td></tr><tr><td>gfun_air.py</td><td>【主体】负责所有功能的具体实现。</td></tr><tr><td>gtime.py</td><td>【模块】所有时间相关功能</td></tr><tr><td>ghuman.py</td><td>【模块】处理所有与人物相关的问题</td></tr><tr><td>spider.py</td><td>【模块】所有与网页相关的功能</td></tr><tr><td>chatme.py</td><td>【模块】图灵机器人闲聊接口</td></tr><tr><td>readed.temp</td><td>【文档】运行状态临时文件</td></tr><tr><td>People.xml</td><td>【文档】人物信息库</td></tr><tr><td>Dictionary.txt</td><td>【文档】（聊天）本地语料库</td></tr></tbody>
+							</table></figure>
+							
+							<h2>已完成项</h2>
+							<h4>网络爬虫</h4>
+							<ul>
+							<li><input type='checkbox' disabled='disabled' checked/><p>随机靓图（<del>目前基于静态网址，之后要优化为实时随机获取</del>）</p>
+							</li>
+							<li><input type='checkbox' disabled='disabled' checked/><p>毒鸡汤</p>
+							</li>
+
+							</ul>
+							<h4>API</h4>
+							<ul>
+							<li><input type='checkbox' disabled='disabled' checked/><p>闲聊（图灵机器人）</p>
+							</li>
+
+							</ul>
+							<h4>本地</h4>
+							<ul>
+							<li><input type='checkbox' disabled='disabled' /><p>初步搭建人物库</p>
+							</li>
+
+							</ul>
+							<h2>功能介绍</h2>
+							<h3>一. 关于后端</h3>
+							<blockquote><p>命令行窗口界面</p>
+							</blockquote>
+							<h4>单轮对话的显示项目规范</h4>
+							<ol start='' >
+							<li><p><strong>对话来源判断</strong></p>
+							<p>群消息 or 私聊；消息发送者</p>
+							</li>
+							<li><p><strong>信息性质分类</strong></p>
+							<p>普通对话 or CQ码 or 混合消息</p>
+							<p><sup>（当包含CQ码时，显示CQ码具体分类。)</sup></p>
+							</li>
+							<li><p><strong>诉求判断器的判断结果，并附上简单的判断摘要。</strong></p>
+							</li>
+							<li><p><strong>打印姬娜的回答</strong></p>
+							</li>
+							<li><p><strong>发送消息的状态反馈</strong></p>
+							</li>
+
+							</ol>
+							<p>示例：</p>
+							<pre><code>==========群消息(201226-174228)==========
+$ 超哥：[普通文本]
+#明天的天气怎么样#
+----------------------------------------
+【诉求判断器】询问天气...
+Require: [&#39;weather&#39;, 1, [&#39;明天&#39;]]
+----------------------------------------
+$ 姬娜：明天是12月27日，周日，晴，最高温度13°，最低温度3°。
+{&quot;data&quot;:{&quot;message_id&quot;:-1147435726},&quot;retcode&quot;:0,&quot;status&quot;:&quot;ok&quot;}
+========================================
+							</code></pre>
+							<p>&nbsp;</p>
+							<h3>二. 功能解析</h3>
+							<h4>1. gfun_air</h4>
+							<blockquote><p>功能库</p>
+							</blockquote>
+							<figure><table>
+							<thead>
+							<tr><th>依赖库</th><th>备注</th></tr></thead>
+							<tbody><tr><td>os</td><td>&nbsp;</td></tr><tr><td><del>pygame</del></td><td>目前没用到(发不了语音)</td></tr><tr><td><del>mutagen.mp3 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.323ex" height="1.644ex" viewBox="0 -605.1 1000 707.6" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E1-MJMAIN-2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMAIN-2192" x="0" y="0"></use></g></svg></span><script type="math/tex">\rightarrow</script> MP3</del></td><td>处理音频(没用到)</td></tr><tr><td>time</td><td>设置延迟</td></tr><tr><td>jieba.posseg</td><td>分词、词性标注</td></tr><tr><td>chatme</td><td>[自建库]闲聊引擎</td></tr></tbody>
+							</table></figure>
+							<ul>
+							<li><p><strong>主体</strong></p>
+							<ul>
+							<li><strong>Require类</strong>：诉求判断器</li>
+							<li><strong>do()函数</strong>：命令 - 逻辑处理</li>
+							<li><strong>gfun()函数</strong>：除了<code>gg$</code>命令外所有的逻辑处理</li>
+
+							</ul>
+							</li>
+
+							</ul>
+							<ol start='' >
+							<li><p><strong>Require(sentence)</strong></p>
+							<blockquote><p>sentence := 文本内容。Require()将基于此文本内容做出诉求判断。</p>
+							</blockquote>
+							<figure><table>
+							<thead>
+							<tr><th>元素</th><th>说明</th></tr></thead>
+							<tbody><tr><td>self.s</td><td>即<code>sentence</code>，判断对象。</td></tr><tr><td>self.whois()</td><td>【诉求】询问人物。【返回结果】<code>[#0/1:是否此述求#,#str:询问对象#]</code></td></tr><tr><td>self.weather()</td><td>【诉求】询问天气。【返回结果】<code>[#0/1:是否此述求#,#0/1:是否询问某天天气#,#str:询问的时间#]</code></td></tr><tr><td>self.run()</td><td>【主函数】判断诉求。【返回结果】<code>[#str:诉求名#,#附加信息#*]</code></td></tr></tbody>
+							</table></figure>
+							</li>
+							<li><p><strong>gfun(ask) </strong></p>
+							<blockquote><p>ask := 输入文本（诉求）</p>
+							</blockquote>
+							<p>诉求条件语句块：</p>
+							<p>(1) showpic : 要求发给用户一些优美的图片</p>
+							<p>附加信息</p>
+							<p>(2) whois : 询问某个人的身份</p>
+							<p>(3) weather : 询问天气</p>
+							<p>(4) other ： 闲聊</p>
+							</li>
+
+							</ol>
+							<p>&nbsp;</p>
+							<h4>2. Chatme</h4>
+							<blockquote><p>闲聊引擎</p>
+							</blockquote>
+							<figure><table>
+							<thead>
+							<tr><th>依赖库</th><th>备注</th></tr></thead>
+							<tbody><tr><td>os</td><td>本地资料相关操作</td></tr><tr><td>requests</td><td>上网，与api接口通讯</td></tr><tr><td>random</td><td>摇号，避免单调</td></tr><tr><td>json</td><td>包装http请求</td></tr><tr><td>urllib.request</td><td>&nbsp;</td></tr></tbody>
+							</table></figure>
+							<figure><table>
+							<thead>
+							<tr><th>依赖文件</th><th>备注</th></tr></thead>
+							<tbody><tr><td>Dictionary.txt</td><td>本地语料库字典</td></tr></tbody>
+							</table></figure>
+							<h4>3. ghuman</h4>
+							<p><strong>提问举例</strong>：</p>
+							<ul>
+							<li><p>我在哪</p>
+							<p>涉及提问者身份识别，提问者原始信息所在地检索以及位置信息判断。</p>
+							</li>
+
+							</ul>
+                            
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- single-blog-Area End-->
+
+    <!-- subscribe-Area Start-->
+    <section class="subscribe-area pd-top-80 pd-bottom-80" style="background: url(assets/img/newsletter/bg.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="subscribe-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="single-subscribe-wrap">
+                                    <input type="text" placeholder="Enter your mail here">
+                                    <button class="btn btn-black">SUBSCRIBE FOR NEWSLETTER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe-Area end-->
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget">
+                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
+                        <p>869, Miyan road, Y4 456 Mona Town.</p>
+                        <p>Office No 3456.</p>
+                        <p>info@example.com</p>
+                        <p class="m-0">+234-58286909</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">Links.</h4>
+                        <ul>
+                            <li><a href="#">LED light source</a></li>
+                            <li><a href="#">Pendant Lamp</a></li>
+                            <li><a href="#">Floor Lamp</a></li>
+                            <li><a href="#">LED Pendant Lamp</a></li>
+                            <li><a href="#">Table Lamp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">About Us.</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">My account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget widget_contact">
+                        <h4 class="widget-title">Contact Us.</h4>
+                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+                        <ul class="social-area">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!--Footer bottom-->
+    <div class="footer-bottom footer-bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-area">
+                        <p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>                        
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <!--Footer bottom-->        
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="la la-arrow-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

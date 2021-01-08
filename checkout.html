@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Bmarketo - Minimal E-commerce Html Template</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- preloader area end -->
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">HOME</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">HOME 01</a></li>
+                                <li><a href="index-2.html">HOME 02</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">PRODUCTS</a>
+                            <ul class="sub-menu">
+                                <li><a href="product.html">PRODUCTS 01</a></li>
+                                <li><a href="product-details.html">PRODUCTS DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">PAGES</a>
+                            <ul class="sub-menu">
+                                <li><a href="cart.html">CART</a></li>
+                                <li><a href="checkout.html">CHECKOUT</a></li>
+                                <li><a href="product.html">PRODUCTS 01</a></li>
+                                <li><a href="product-details.html">PRODUCTS DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">BLOG</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog.html">BLOG 01</a></li>
+                                <li><a href="blog-details.html">BLOG DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <div class="breadcrumb-area" style="background-image:url('assets/img/breadcrumb/1.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <div class="section-title text-center">
+                            <h1 class="page-title">CHECKOUT</h1>
+                            <ul class="page-list">
+                                <li><a href="index.html">HOME</a></li>
+                                <li>CHECKOUT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- checkout-Area Start-->
+    <section class="checkout-area bg-grey pd-top-80 pd-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-6">
+                    <div class="checkout-inner pd-bottom-50">
+                        <h4>Billing Details</h4>
+                        <div class="row">
+                        	<div class="col-12">
+                        		<div class="payment-wrap">
+                        			<div class="payment-option">
+	                                    <label>
+	                                        <input type="radio" checked="checked" name="radio">
+	                                        <span class="checkmark"></span>
+	                                    </label>
+	                                    PayPal
+	                                </div>
+	                                <div class="payment-option">
+	                                    <label>
+	                                        <input type="radio" checked="checked" name="radio">
+	                                        <span class="checkmark"></span>
+	                                    </label>
+	                                    Credit Card
+	                                </div>
+                        		</div>	
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input-wrap">
+                                    <label>Your Name*</label>
+                                    <input type="text" class="single-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input-wrap">
+                                    <label>Your Email*</label>
+                                    <input type="text" class="single-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input-wrap">
+                                    <label>Phone Number</label>
+                                    <input type="text" class="single-input">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input-wrap">
+                                    <label>Card Number</label>
+                                    <input type="text" class="single-input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                        		<a class="btn btn-black" href="#">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- checkout-Area End-->
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget">
+                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
+                        <p>869, Miyan road, Y4 456 Mona Town.</p>
+                        <p>Office No 3456.</p>
+                        <p>info@example.com</p>
+                        <p class="m-0">+234-58286909</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">Links.</h4>
+                        <ul>
+                            <li><a href="#">LED light source</a></li>
+                            <li><a href="#">Pendant Lamp</a></li>
+                            <li><a href="#">Floor Lamp</a></li>
+                            <li><a href="#">LED Pendant Lamp</a></li>
+                            <li><a href="#">Table Lamp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">About Us.</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">My account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget widget_contact">
+                        <h4 class="widget-title">Contact Us.</h4>
+                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+                        <ul class="social-area">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!--Footer bottom-->
+    <div class="footer-bottom footer-bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-area">
+                        <p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>                        
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <!--Footer bottom-->        
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="la la-arrow-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

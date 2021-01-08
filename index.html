@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Bmarketo - Minimal E-commerce Html Template</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- preloader area end -->
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img" width="10" height="10"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Main</a>
+                            <ul class="sub-menu">
+                                <li><a href="#Top">Top</a></li>
+                                <li><a href="#program" class="la la-arrow-up">My Programs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="webs.html">Webs</a>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">PAGES</a>
+                            <ul class="sub-menu">
+                                <li><a href="cart.html">CART</a></li>
+                                <li><a href="checkout.html">CHECKOUT</a></li>
+                                <li><a href="product.html">PRODUCTS 01</a></li>
+                                <li><a href="product-details.html">PRODUCTS DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">BLOG</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog.html">BLOG 01</a></li>
+                                <li><a href="blog-details.html">BLOG DETAILS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <!-- Banner Area Start-->
+    <section class="banner-area banner-area-2">
+        <div class="banner-slider owl-carousel owl-theme">
+            <div class="item" style="background: url(assets/img/banner/bg.png);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 offset-lg-7 align-self-center">
+                            <div class="banner-inner">
+                                <h6>WELLCOME TO MY HOMEPAGE</h6>
+                                <h1>I'm Zachary </h1>
+                                <a class="btn btn-white" href="product.html">JOIN ME<i class="la la-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background: url(assets/img/banner/bg.png);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 offset-lg-7 align-self-center">
+                            <div class="banner-inner">
+                                <h6>WELLCOME TO MY HOMEPAGE</h6>
+                                <h1>I'm Zachary </h1>
+                                <a class="btn btn-white" href="product.html">JOIN ME<i class="la la-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Discover-Product-Area Start-->
+    <section class="discover-product-area pd-top-66 pd-bottom-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center" id="#">
+                        <h3>Frequently Used Panels</h3>
+                    </div>                    
+                </div>
+                <div class="col-lg-12">
+                    <ul class="discover-product-inner">
+                        <li class="discover-product-wrap"><a href="#program"><img src="assets/img/product/gina_pic.png" alt="img">
+                            <h6>My Programs</h6></a></li>
+                        <li class="discover-product-wrap"><a href="product-details.html"><img src="assets/img/product/d-2.png" alt="img">
+                            <h6>LAPTOP SERIES</h6></a></li>
+                        <li class="discover-product-wrap"><a href="product-details.html"><img src="assets/img/product/d-3.png" alt="img">
+                            <h6>LAPTOP SERIES</h6></a></li>
+                        <li class="discover-product-wrap"><a href="product-details.html"><img src="assets/img/product/d-4.png" alt="img">
+                            <h6>LAPTOP SERIES</h6></a></li>
+                        <li class="discover-product-wrap"><a href="product-details.html"><img src="assets/img/product/d-5.png" alt="img">
+                            <h6>LAPTOP SERIES</h6></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- Discover-Product-Area End-->
+
+    <!-- Product-Area Start-->
+    <section class="product-area pd-top-66 pd-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2 class="title">Webs Collection</h2>
+                    </div>                    
+                </div>
+                <div class="col-lg-12">
+                    <div class="isotope-filters product-isotope-btn text-center">
+                        <!-- <button class="button active" data-filter="*">All</button> -->
+						<button class="button" data-filter=".cat-0">X</button>
+                        <button class="button" data-filter=".cat-1">Electric</button>
+                        <button class="button" data-filter=".cat-2">IT</button>
+                        <button class="button" data-filter=".cat-3">AI</button>
+                        <button class="button" data-filter=".cat-4">Arts</button>
+                        <button class="button" data-filter=".cat-5">Tools</button>
+                        <button class="button" data-filter=".cat-6">Source</button>
+                        <button class="button" data-filter=".cat-7">News</button>
+                        <button class="button" data-filter=".cat-8">Media</button>
+						<button class="button" data-filter=".cat-9">Maker</button>
+						<button class="button" data-filter=".cat-10">Learn</button>
+						<button class="button mr-0" data-filter=".cat-11">18</button>
+                    </div>
+                </div>
+            </div>
+            <!-- start-project-section -->
+            <div class="gallery-section">        
+                <div class="gallery-isotope row">
+                    <div class="gallery-sizer col-1"></div>
+                    <!-- gallery item start here -->
+                    
+                </div>
+            </div>
+            <!-- project section End -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a class="btn btn-border" href="product.html">LOAD MORE <i class="fa fa-redo-alt"></i></a>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- Product-Area End-->
+
+    <!-- Service-Area Start-->
+    <section class="service-area bg-grey pd-top-66 pd-bottom-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="offer-wrap text-center">
+                        <h2>This is not <span>Kidding </span></h2>
+                    </div>                  
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service-wrap">
+                        <div class="media">
+                            <div class="thumb">
+                                <img src="assets/img/icon/truck.png" alt="img">
+                            </div>
+                            <div class="media-body">
+                                <h6>Very Fast Delivery</h6>
+                                <p>We arrived your door very fast</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service-wrap">
+                        <div class="media">
+                            <div class="thumb">
+                                <img src="assets/img/icon/like.png" alt="img">
+                            </div>
+                            <div class="media-body">
+                                <h6>Save 20% For Every Sell</h6>
+                                <p>Get offer for every day, month</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service-wrap">
+                        <div class="media">
+                            <div class="thumb">
+                                <img src="assets/img/icon/phone-alt.png" alt="img">
+                            </div>
+                            <div class="media-body">
+                                <h6>Call Today Us</h6>
+                                <p>Call us for any order or delivery</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service-Area End-->
+
+    <!-- Product-Area Start-->
+    <section class="product-area pd-top-70 pd-bottom-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h3 class="title">Best deals for this week</h3>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="product-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/9.png" alt="image">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                    </ul>   
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Shirt clothing sleeve skirt</a></h6>
+                                    <p><del>$50.00</del>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/7.png" alt="image">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                    </ul>   
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Kettle water boiler</a></h6>
+                                    <p><del>$50.00</del>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/10.png" alt="image">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                    </ul>   
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Printed t-shirt sweater plain</a></h6>
+                                    <p><del>$50.00</del>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/11.png" alt="image">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+                                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="far fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                    </ul>   
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Vase glass</a></h6>
+                                    <p><del>$50.00</del>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- Product-Area End-->
+
+    <!-- discount-product-Area Start-->
+    <div class="discount-product-area bg-pink pd-top-80 pd-bottom-50" id="program">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-discount-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/product/1.png" alt="img">
+                        </div>
+                        <div class="wrap-details">
+                            <h6><a href="#">AI Assistant「Gina」</a></h6>
+                            <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                        </div>
+                        <div class="hover-wrap-details text-center">
+                            <h6>AI Assistant</h6>
+                            <h2>Gina</h2>
+                            <h4>人工智障  姬娜</h4>
+                            <p>致力于实现能够完整模拟人格的人工智能机器人。</p>
+                            <a href="#">· Introduction ·</a>
+							<a href="https://github.com/ZacharyChiu/Gina"><br>· Github项目中心 ·</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-discount-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/discount/3.png" alt="img">
+                        </div>
+                        <div class="wrap-details">
+                            <h6><a href="#">QQ to Gina</a></h6>
+                            <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                        </div>
+                        <div class="hover-wrap-details text-center">
+                            <h6>QQ to Gina</h6>
+                            <h2>Q2G</h2>
+                            <h4>通过QQ连接姬娜</h4>
+                            <p>基于go-cqhttp项目，以QQ为平台实现从公网访问姬娜。</p>
+                            <a href="#">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-discount-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/discount/2.png" alt="img">
+                        </div>
+                        <div class="wrap-details">
+                            <h6><a href="#">Shirt clothing sleeve skirt</a></h6>
+                            <p><del>$50.00</del>$30.00</p>
+                            <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                        </div>
+                        <div class="hover-wrap-details text-center">
+                            <h6>UP TO SELL</h6>
+                            <h2>50% OFF</h2>
+                            <h4>Get The Best Price</h4>
+                            <p>Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</p>
+                            <a href="#">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- discount-product-Area End-->
+
+    <!-- Product-Area Start-->
+    <section class="product-area pd-top-70 pd-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2 text-center">
+                        <h3 class="title">Top selling products in this week</h3>
+                    </div>                    
+                </div>
+            </div>
+        </div>    
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="product-slider-2 pd-bottom-80 owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/12.png" alt="image">  
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Apple watch series</a></h6>
+                                    <p><del>$120.00</del>$80.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/5.png" alt="image">  
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Gumshoes black fashion</a></h6>
+                                    <p><del>$120.00</del>$80.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/6.png" alt="image">   
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Woman white dress</a></h6>
+                                    <p>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/7.png" alt="image">  
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Kettle water boiler</a></h6>
+                                    <p>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/8.png" alt="image">  
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Congee rice cooker</a></h6>
+                                    <p>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-single-wrap">
+                                <div class="thumb">
+                                    <img src="assets/img/product/13.png" alt="image">  
+                                </div>
+                                <div class="product-details">
+                                    <h6><a href="product-details.html">Pizza tomato sauce kebab</a></h6>
+                                    <p>$30.00</p>
+                                    <a class="product-cart-btn" href="#"><img src="assets/img/icon/cart.png" alt="img"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <!-- Product-Area End-->
+
+    <!-- add-Area Start-->
+    <section class="add-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="assets/img/add/1.png" alt="img">
+                        </a>
+                    </div>                   
+                </div>
+            </div>
+        </div>  
+    </section>
+    <!-- add-Area End-->
+
+    <!-- blog-Area Start-->
+    <section class="blog-area pd-top-66 pd-bottom-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2 text-center">
+                        <h3 class="title">XX XX </h3>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-blog-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/blog/我不是人.jpg" alt="img">
+                        </div>
+                        <div class="blog-wrap-details">
+                            <h6><a href="blog-details.html">《我不是人》</a></h6>
+                            <p>Best dress for everyone ed totam velit viverra nobis donec recusandae perspiciatis incididuno</p>
+                            <span>POST BY: <a href="#">Shitofape</a></span><span class="mr-0"><a href="#"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-blog-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/blog/2.png" alt="img">
+                        </div>
+                        <div class="blog-wrap-details">
+                            <h6><a href="blog-details.html">Exclusive Chair 1562 LTG</a></h6>
+                            <p>Best dress for everyone ed totam velit viverra nobis donec recusandae perspiciatis incididuno</p>
+                            <span>POST BY: <a href="#">ADMIN</a></span><span class="mr-0"><a href="#">COMMENTS 13</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-blog-wrap">
+                        <div class="thumb">
+                            <img src="assets/img/blog/3.png" alt="img">
+                        </div>
+                        <div class="blog-wrap-details">
+                            <h6><a href="blog-details.html">Vase glass 1562 LTG modal</a></h6>
+                            <p>Best dress for everyone ed totam velit viverra nobis donec recusandae perspiciatis incididuno</p>
+                            <span>POST BY: <a href="#">ADMIN</a></span><span class="mr-0"><a href="#">COMMENTS 13</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog-Area End-->
+
+    <!-- subscribe-Area Start-->
+    <section class="subscribe-area pd-top-80 pd-bottom-80 bg-pink-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="subscribe-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="single-subscribe-wrap">
+                                    <input type="text" placeholder="Enter your mail here">
+                                    <button class="btn btn-black">SUBSCRIBE FOR NEWSLETTER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe-Area end-->
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget">
+                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
+                        <p>869, Miyan road, Y4 456 Mona Town.</p>
+                        <p>Office No 3456.</p>
+                        <p>info@example.com</p>
+                        <p class="m-0">+234-58286909</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">Links.</h4>
+                        <ul>
+                            <li><a href="#">LED light source</a></li>
+                            <li><a href="#">Pendant Lamp</a></li>
+                            <li><a href="#">Floor Lamp</a></li>
+                            <li><a href="#">LED Pendant Lamp</a></li>
+                            <li><a href="#">Table Lamp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">About Us.</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">My account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget widget_contact">
+                        <h4 class="widget-title">Contact Us.</h4>
+                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+                        <ul class="social-area">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!--Footer bottom-->
+    <div class="footer-bottom footer-bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-area">
+                        <p>Copyright &copy; 2021.Zachary All rights reserved.</p>                        
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <!--Footer bottom-->        
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="la la-arrow-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

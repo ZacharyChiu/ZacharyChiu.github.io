@@ -1,0 +1,85 @@
+<li><a href="https://www.ednchina.com/news/"><i class="fa fa-caret-right"></i>END China<span> </span></a></li>
+
+<li><a href="https://www.dianyuan.com/"><i class="fa fa-caret-right"></i>电源网<span> </span></a></li>
+
+<li><a href="http://www.chongdiantou.com/"><i class="fa fa-caret-right"></i>充电头网<span> </span></a></li>
+
+<li><a href="https://bbs.elecfans.com/"><i class="fa fa-caret-right"></i>电子发烧友<span> </span></a></li>
+
+<li><a href="http://bbs.eeworld.com.cn/"><i class="fa fa-caret-right"></i>电子工程世界<span> </span></a></li>
+
+<li><a href="https://www.eefocus.com/"><i class="fa fa-caret-right"></i>与非网<span> </span></a></li>
+
+<li><a href="https://github.com/ZacharyChiu?tab=repositories"><i class="fa fa-caret-right"></i>Github<span> </span></a></li>
+
+<li><a href="https://www.w3school.com.cn/"><i class="fa fa-caret-right"></i>W3School<span>Web相关教程网站</span></a></li>
+
+<li><a href="https://www.runoob.com/"><i class="fa fa-caret-right"></i>菜鸟教程<span> </span></a></li>
+
+<li><a href="https://paperswithcode.com"><i class="fa fa-caret-right"></i>Papers With Code<span>AI算法论文集合</span></a></li>
+
+<li><a href="https://stackoverflow.com"><i class="fa fa-caret-right"></i>Stack Overflow<span>Bug搜索</span></a></li>
+
+<li><a href="https://leetcode-cn.com"><i class="fa fa-caret-right"></i>力扣题库<span>编程相关题库</span></a></li>
+
+<li><a href="https://www.csdn.net"><i class="fa fa-caret-right"></i>CSDN<span> </span></a></li>
+
+<li><a href="https://tophub.today"><i class="fa fa-caret-right"></i>Tophub<span> </span></a></li>
+
+<li><a href="https://www.huaban.com"><i class="fa fa-caret-right"></i>花瓣网<span> </span></a></li>
+
+<li><a href="https://www.pinterest.com"><i class="fa fa-caret-right"></i>Pinterest<span> </span></a></li>
+
+<li><a href="https://www.artstation.com"><i class="fa fa-caret-right"></i>Artstation<span> </span></a></li>
+
+<li><a href="https://www.soumeitu.com/"><i class="fa fa-caret-right"></i>搜美图<span>壁纸资源</span></a></li>
+
+<li><a href="http://www.win4000.com/"><i class="fa fa-caret-right"></i>美桌<span>壁纸资源</span></a></li>
+
+<li><a href="https://www.sex.com"><i class="fa fa-caret-right"></i>Sex<span>人体艺术相关素材</span></a></li>
+
+<li><a href="https://e-hentai.org"><i class="fa fa-caret-right"></i>E-Hentai<span> </span></a></li>
+
+<li><a href="https://rule34.xxx"><i class="fa fa-caret-right"></i>Rule34<span> </span></a></li>
+
+<li><a href="https://bcy.net/"><i class="fa fa-caret-right"></i>半次元<span> </span></a></li>
+
+<li><a href="https://www.pixiv.net"><i class="fa fa-caret-right"></i>Pixiv<span> </span></a></li>
+
+<li><a href="http://www.hgjart.com/gallery.asp"><i class="fa fa-caret-right"></i>黄光剑主页<span> </span></a></li>
+
+<li><a href="https://www.gifhome.com/dt/"><i class="fa fa-caret-right"></i>Gif之家<span>自制动态表情包</span></a></li>
+
+<li><a href="https://9gag.com"><i class="fa fa-caret-right"></i>9GAG<span>英文版内涵段子</span></a></li>
+
+<li><a href="https://www.bytelang.com/build/python/editor"><i class="fa fa-caret-right"></i>字节社<span>在线代码运行</span></a></li>
+
+<li><a href="http://www.bejson.com/"><i class="fa fa-caret-right"></i>在线工具<span> </span></a></li>
+
+<li><a href="https://www.iconfont.cn/"><i class="fa fa-caret-right"></i>阿里图标<span> </span></a></li>
+
+<li><a href="http://www.epinv.com/shufa/"><i class="fa fa-caret-right"></i>中文书法字体转换<span> </span></a></li>
+
+<li><a href="http://www.epinv.com/calligraphy/"><i class="fa fa-caret-right"></i>英文书法字体转换<span> </span></a></li>
+
+<li><a href="https://www.ottoli.cn/zy/artbook"><i class="fa fa-caret-right"></i>ottoli个人主页<span>美术教材资源</span></a></li>
+
+<li><a href="http://www.gequdaquan.net/"><i class="fa fa-caret-right"></i>音乐聚合<span>VIP音乐免费下载</span></a></li>
+
+<li><a href="http://520.lxxh1.com/"><i class="fa fa-caret-right"></i>共享窝<span> </span></a></li>
+
+<li><a href="https://vision.aliyun.com/?spm=a2c6h.12908639.1395090.9.614a6886mJmK21"><i class="fa fa-caret-right"></i>达摩院计算机视觉<span>AI视觉开发平台</span></a></li>
+
+<li><a href="https://homenew.console.aliyun.com/home/scene/Operation"><i class="fa fa-caret-right"></i>阿里云<span> </span></a></li>
+
+<li><a href="https://console.xfyun.cn/app/myapp"><i class="fa fa-caret-right"></i>讯飞AI开发平台<span> </span></a></li>
+
+<li><a href="https://console.bce.baidu.com/?_=1608357898170#/index/overview"><i class="fa fa-caret-right"></i>百度智能云<span> </span></a></li>
+
+<li><a href="https://artbreeder.com/shitofape"><i class="fa fa-caret-right"></i>ArtBreeder<span>AI人像生成</span></a></li>
+
+<li><a href="https://bigjpg.com/"><i class="fa fa-caret-right"></i>AI图片放大<span> </span></a></li>
+
+<li><a href="https://sc.chinaz.com/tag_moban/html.html"><i class="fa fa-caret-right"></i>站长素材<span>html模板免费下载</span></a></li>
+
+<li><a href=""><i class="fa fa-caret-right"></i><span> </span></a></li>

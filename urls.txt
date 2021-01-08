@@ -1,0 +1,46 @@
+# url$name$tip$bg$cats
+# 1-Electric; 2-IT; 3-AI; 4-Arts; 5-Tools; 6-Source; 7-News; 8-Media; 9-Maker; 10-learning; 11-18
+
+https://www.ednchina.com/news/$END China$ $2.png$.1.7
+https://www.dianyuan.com/$电源网$ $2.png$.1.10
+http://www.chongdiantou.com/$充电头网$ $2.png$.1
+https://bbs.elecfans.com/$电子发烧友$ $2.png$.1.7
+http://bbs.eeworld.com.cn/$电子工程世界$ $2.png$.1
+https://www.eefocus.com/$与非网$ $2.png$.1
+https://github.com/ZacharyChiu?tab=repositories$Github$ $2.png$.1.2.3.6.10
+https://www.w3school.com.cn/$W3School$Web相关教程网站$2.png$.2.10
+https://www.runoob.com/$菜鸟教程$ $2.png$.2.3.10
+https://paperswithcode.com$Papers With Code$AI算法论文集合$2.png$.2.3.10
+https://stackoverflow.com$Stack Overflow$Bug搜索$2.png$.2.10
+https://leetcode-cn.com$力扣题库$编程相关题库$2.png$.2.10
+https://www.csdn.net$CSDN$ $2.png$.1.2.3.7.10
+https://tophub.today$Tophub$ $2.png$.7
+https://www.huaban.com$花瓣网$ $2.png$.4.6
+https://www.pinterest.com$Pinterest$ $2.png$.4.6.11
+https://www.artstation.com$Artstation$ $2.png$.4.6.11
+https://www.soumeitu.com/$搜美图$壁纸资源$2.png$.4.6
+http://www.win4000.com/$美桌$壁纸资源$2.png$.4.6
+https://www.sex.com$Sex$人体艺术相关素材$2.png$.4.6.11
+https://e-hentai.org$E-Hentai$ $2.png$.4.6.11
+https://rule34.xxx$Rule34$ $2.png$.4.6.11
+https://bcy.net/$半次元$ $2.png$.4.9
+https://www.pixiv.net$Pixiv$ $2.png$.4.6.11
+http://www.hgjart.com/gallery.asp$黄光剑主页$ $2.png$.4
+https://www.gifhome.com/dt/$Gif之家$自制动态表情包$2.png$.5.4.6.9
+https://9gag.com$9GAG$英文版内涵段子$2.png$.7.8
+https://www.bytelang.com/build/python/editor$字节社$在线代码运行$2.png$.2.5.9
+http://www.bejson.com/$在线工具$ $2.png$.2.5.9
+https://www.iconfont.cn/$阿里图标$ $2.png$.4.5.6
+http://www.epinv.com/shufa/$中文书法字体转换$ $2.png$.4.5.6.9
+http://www.epinv.com/calligraphy/$英文书法字体转换$ $2.png$.4.5.6.9
+https://www.ottoli.cn/zy/artbook$ottoli个人主页$美术教材资源$2.png$.4.6.10
+http://www.gequdaquan.net/$音乐聚合$VIP音乐免费下载$2.png$.5.6.8
+http://520.lxxh1.com/$共享窝$ $2.png$.6.8
+https://vision.aliyun.com/?spm=a2c6h.12908639.1395090.9.614a6886mJmK21$达摩院计算机视觉$AI视觉开发平台$2.png$.2.3.9
+https://homenew.console.aliyun.com/home/scene/Operation$阿里云$ $2.png$.2.3.9
+https://console.xfyun.cn/app/myapp$讯飞AI开发平台$ $2.png$.2.3.9
+https://console.bce.baidu.com/?_=1608357898170#/index/overview$百度智能云$ $2.png$.2.3.9
+https://artbreeder.com/shitofape$ArtBreeder$AI人像生成$2.png$.3.4.6.9
+https://bigjpg.com/$AI图片放大$ $2.png$.3.4.5
+https://sc.chinaz.com/tag_moban/html.html$站长素材$html模板免费下载$2.png$.2.6
+$$ $2.png$
