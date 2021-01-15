@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>姬娜</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="shortcut icon" href="assets/img/gina_logo.ico">
+
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- preloader area end -->
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Here</a>
+                            <ul class="sub-menu">
+                                <li><a href="#gdata">GData</a></li>
+                                <li><a href="#gknet">GKnet</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="webs.html">Webs</a>
+                        </li>
+                        <li>
+                            <a href="ideas.html">Afflatus</a>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Notes</a>
+                            <ul class="sub-menu">
+                                <li><a href="https://github.com/ZacharyChiu/notebook/new/main" target="_blank">Write</a></li>
+								<li><a href="https://github.com/ZacharyChiu/notebook/blob/main/ToDo.md" target="_blank">To Do</a></li>
+								<li><a href="https://github.com/ZacharyChiu/notebook/edit/main/Temp.md" target="_blank">Temp</a></li>
+                                <li><a href="https://github.com/ZacharyChiu/notebook/tree/main" target="_blank">List</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">About</a>
+                            <ul class="sub-menu">
+                                <li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io" target="_blank">Github Page</a></li>
+								<li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io/edit/main/index.html" target="_blank">Edit Homepage</a></li>
+                                <li><a href="https://codeload.github.com/ZacharyChiu/ZacharyChiu.github.io/zip/main" target="_blank">Codes Download</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <div class="breadcrumb-area" style="background-image:url('assets/img/breadcrumb/1.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <div class="section-title text-center">
+                            <h1 class="page-title">Gina</h1>
+                            <ul class="page-list">
+                                <li><a href="index.html">HOME</a></li>
+                                <li>My AI Assistant</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- product-details-area start -->
+    <div class="product-details-area pd-top-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="product-thumbnail-wrapper">
+                        <div class="single-thumbnail-slider-2">
+                            <div class="slider-item">
+                                <img src="assets/img/gina_pic/GiFunTree.png" alt="item">
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/img/gina_pic/GinaTree.png" alt="item">
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/img/product-slider/3.png" alt="item">
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/img/product-slider/4.png" alt="item">
+                            </div>
+                            <div class="slider-item">
+                                <img src="assets/img/product-slider/1.png" alt="item">
+                            </div>
+                        </div>
+                        <div class="product-thumbnail-carousel-2">
+                            <div class="single-thumbnail-item">
+                                <img src="assets/img/gina_pic/GiFunTree.png" alt="item">
+                            </div>
+                            <div class="single-thumbnail-item">
+                                <img src="assets/img/gina_pic/GinaTree.png" alt="item">
+                            </div>
+                            <div class="single-thumbnail-item">
+                                <img src="assets/img/product-slider/3s.png" alt="item">
+                            </div>
+                            <div class="single-thumbnail-item">
+                                <img src="assets/img/product-slider/4s.png" alt="item">
+                            </div>
+                            <div class="single-thumbnail-item">
+                                <img src="assets/img/gina_pic/GiFunTree.png" alt="item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-xl-1">
+                    <div class="product-item-details">
+                        <h4 class="entry-title">人工智能 姬娜</h4>
+                        <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        <div class="star-rating">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span>16 Reviews</span>
+                        </div> 
+                        <div class="price">$30</div>
+                        <form>
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" class="input-text qty text" step="1" min="1" max="10000" name="quantity" value="1">
+                                <input type="button" value="+" class="plus">
+                            </div>
+                            <button type="submit" class="btn btn-black">Add to Cart <i class="fas fa-shopping-basket"></i></button>
+                        </form>
+                        <ul class="color-variation">
+                            <li><a href="#"><span class="pink"></span></a></li>
+                            <li><a href="#"><span class="yellow"></span></a></li>
+                            <li><a href="#"><span class="ash"></span></a></li>
+                            <li>SKU: N/A</li>
+                        </ul>
+                        <button type="submit" class="btn btn-border"><i class="far fa-eye"></i>Add to wishlist</button>
+                        <div class="category">
+                            <span>Category:</span>
+                            <a href="#">Table Lampe,</a>
+                            <a href="#">Light</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product-details-area end -->
+
+    <!-- shop-product area start -->
+    <div class="product-details-tab-area pd-top-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product-details-tabs">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link br-sm-1" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Framework</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="profile" aria-selected="false">GiFun</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="delivery-tab" data-toggle="tab" href="#delivery" role="tab" aria-controls="profile" aria-selected="false">Others</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content specific-tab" id="myTabContent">
+                            <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h4 class="title">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                                        <p class="mb-5">accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?</p>
+                                        <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="thumb">
+                                            <img src="assets/img/gina_pic/GinaTree.png" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade describe-tab" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <img src="assets/img/gina_pic/GiFunTree.png" alt="img">
+								<div class="size">Size: 
+                                    <a href="#">S</a>
+                                    <a href="#">M</a>
+                                    <a href="#">L</a>
+                                    <a href="#">XL</a>
+                                </div>
+                                <ul class="color-variation">
+                                    <li>Color: </li>
+                                    <li><a href="#"><span class="pink"></span></a></li>
+                                    <li><a href="#"><span class="yellow"></span></a></li>
+                                    <li class="ml-0"><a href="#"><span class="ash"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane review-tab fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="add-review">
+                                            <h4 class="title">Add Review</h4>
+                                            <p class="woocommerce-noreviews">Your email address will not be published. Required fields are marked *</p>
+                                            <div class="star-rating">
+                                                <span>Your Rating:</span>
+                                                <span><i class="far fa-star"></i></span>
+                                                <span><i class="far fa-star"></i></span>
+                                                <span><i class="far fa-star"></i></span>
+                                                <span><i class="far fa-star"></i></span>
+                                                <span><i class="far fa-star"></i></span>
+                                            </div> 
+                                            <form class="contact-form">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="single-input-wrap">
+                                                            <label>Name</label>
+                                                            <input type="text" class="single-input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="single-input-wrap">
+                                                            <label>Email address</label>
+                                                            <input type="text" class="single-input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="single-input-wrap">
+                                                            <label>Your review </label>
+                                                            <textarea class="single-input textarea"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="btn btn-black w-100" href="#">Submit</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade delivery-tab" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+                                <div class="row">
+                					<div class="col-lg-3 col-sm-6">
+                						<div class="thumb">
+                							<img src="assets/img/product-slider/3.png" alt="image">
+                						</div>
+                					</div>
+                					<div class="col-lg-3 col-sm-6">
+                						<div class="thumb">
+                							<img src="assets/img/product-slider/1.png" alt="image">
+                						</div>
+                					</div>
+                					<div class="col-lg-6">
+                						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor. voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor tua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea  Lorem ipsum dolor. voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet no sea takimata santus est Lorem ipsum dolor sit amet</p>
+                					</div>
+                					<div class="col-lg-12">
+                						<p class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor o dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit.</p>
+                					</div>
+                				</div>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shop-product area end -->
+
+
+    <!-- partner-Area Start-->
+    <section class="partner-area bg-grey pd-top-80 pd-bottom-80" id="gdata">
+		<div class="container">
+			<div class="text" style=" text-align:center;"><a href="#top"><h3>· GData ·</h3></a></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="partner-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/1.png" alt="img">
+									<div class="text" style=" text-align:center;"><h5>Tags</h5></div>
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/2.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/3.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/4.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/5.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="single-blog-area pd-top-80 pd-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="blog-details-inner">
+                        <div class="blog-details-wrap">
+                            <div class="meta">
+                                <span class="author">
+                                    <a href="#"><i class="fas fa-user" aria-hidden="true"></i>
+                                    Admin</a>
+                                </span>
+                                <span class="date">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    15/10/2021
+                                </span>
+                            </div>
+                            <h4><a href="#">Table lampe 1562 LTG modal</a></h4>
+                            <p>It in adapted natural hastily is justice. Six draw you him full not mean evil. Shy occasional terminated insensible and inhabiting gay. So know do fond to half on. Now who promise was justice new winding. In finished on he speaking suitable advanced if. Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs led certainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart turned hearts as me wished. Therefore allowance too perfectly gentleman supposing man his now. Families goodness all eat out bed steepest servants.</p>
+
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur pariatur accusantium veniam, magnam odio simili</p>
+                            </blockquote>
+
+                            <p class="mb-4">Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                            <div class="gallery-wrap mb-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/2.png" alt="img">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/3.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>                            
+                            <p>Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- partner-Area End-->
+	
+	<!-- partner-Area Start-->
+    <section class="partner-area bg-grey pd-top-80 pd-bottom-80" id="gknet">
+		<div class="container">
+			<div class="text" style=" text-align:center;"><a href="#top"><h3>· GKnet ·</h3></a></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="partner-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/1.png" alt="img">
+									<div class="text" style=" text-align:center;"><h5>简介</h5></div>
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/2.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/3.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/4.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/partner/5.png" alt="img">
+                                </a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="single-blog-area pd-top-80 pd-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="blog-details-inner">
+                        <div class="blog-details-wrap">
+                            <div class="meta">
+                                <span class="author">
+                                    <a href="#"><i class="fas fa-user" aria-hidden="true"></i>
+                                    Admin</a>
+                                </span>
+                                <span class="date">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    15/10/2021
+                                </span>
+                            </div>
+                            <h4><a href="#">知识网络</a></h4>
+                            <p>使用知识图谱来记录知识。用到的工具有：</p>
+
+                            <blockquote class="blockquote"><ul>
+							<li>知识网络可视化：<a href='https://py2neo.readthedocs.io/en/2020.1.1/' target="_blank">neo4j</a></li>
+							<li>python库：py2neo</li>
+
+							</ul>
+							</blockquote>
+
+                            <p class="mb-4">Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                            <div class="gallery-wrap mb-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/2.png" alt="img">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/3.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>                            
+                            <p>Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- partner-Area End-->
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget">
+                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
+                        <p>869, Miyan road, Y4 456 Mona Town.</p>
+                        <p>Office No 3456.</p>
+                        <p>info@example.com</p>
+                        <p class="m-0">+234-58286909</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">Links.</h4>
+                        <ul>
+                            <li><a href="#">LED light source</a></li>
+                            <li><a href="#">Pendant Lamp</a></li>
+                            <li><a href="#">Floor Lamp</a></li>
+                            <li><a href="#">LED Pendant Lamp</a></li>
+                            <li><a href="#">Table Lamp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">About Us.</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">My account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget widget_contact">
+                        <h4 class="widget-title">Contact Us.</h4>
+                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+                        <ul class="social-area">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!--Footer bottom-->
+    <div class="footer-bottom footer-bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-area">
+                        <p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>                        
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <!--Footer bottom-->        
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="la la-arrow-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
