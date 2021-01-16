@@ -53,12 +53,14 @@
                 <div class="logo">
                     <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
                 </div>
+				
                 <div class="nav-right-part nav-right-part-mobile">
                     <ul>
                         <li><a class="search header-search" href="#" target="_blank"><i class="fa fa-search"></i></a></li>
                         <li class=""><a class="login-btn" href="#">Login</a></li>
                         <li><a class="shopping-cart-btn" href="#" target="_blank"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
                     </ul>
+					
                 </div>
                 <div class="collapse navbar-collapse" id="themefie_main_menu">
                     <ul class="navbar-nav menu-open">
@@ -114,9 +116,13 @@
                             <h1 class="page-title">Webs List</h1>
                             <ul class="page-list">
                                 <li><a href="index.html">HOME</a></li>
-                                <li>天堂有屎你不吃，地狱无屎你端碗来?</li>
+                                <li id='here'>天堂有屎你不吃，地狱无屎你端碗来?</li>
                             </ul>
                         </div>
+						<div class="section-title text-center">
+							<button class="btn btn-black" onclick="cxkssr()">SSR</button>
+							<button class="btn btn-black" onclick="cxkv2()">V2R</button>
+						</div>
                     </div>
                 </div>
             </div>
@@ -353,5 +359,40 @@
     <script src="assets/js/vendor.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
+	
+	<script type="text/javascript">
+	function cxkssr() {
+		var num = Math.random()*10**12;
+		num = Math.floor(num);
+		mail = num + "@qq.com";
+		document.getElementById("here").innerHTML = mail;
+		
+		var Url2=document.getElementById("here").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+		window.open("https://cxkssr.xyz/auth/register");
+	}
+	function cxkv2() {
+		var num = Math.random()*10**12;
+		num = Math.floor(num);
+		mail = num + "@qq.com";
+		document.getElementById("here").innerHTML = mail;
+		
+		var Url2=document.getElementById("here").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+		window.open("http://cxkv2.xyz/auth/register");
+	}
+	</script>
 </body>
 </html>
