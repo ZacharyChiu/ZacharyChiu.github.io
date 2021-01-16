@@ -117,9 +117,11 @@
                     <div class="row">
                         <div class="col-lg-5 offset-lg-7 align-self-center">
                             <div class="banner-inner">
-                                <h6>WELLCOME TO MY HOMEPAGE</h6>
+                                <h6 id="here">WELLCOME TO MY HOMEPAGE</h6>
                                 <h1>I'm Zachary </h1>
-                                <a class="btn btn-white" href="product.html">JOIN ME<i class="la la-arrow-right"></i></a>
+                                <div class="section-title text-center">
+									<button class="btn btn-black" onclick="cxkv2()">V2R</button>
+								</div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +134,9 @@
                             <div class="banner-inner">
                                 <h6>WELLCOME TO MY HOMEPAGE</h6>
                                 <h1>I'm Zachary </h1>
-                                <a class="btn btn-white" href="product.html">JOIN ME<i class="la la-arrow-right"></i></a>
+                                <div class="section-title text-center">
+									<button class="btn btn-black" onclick="cxkssr()">SSR</button>
+								</div>
                             </div>
                         </div>
                     </div>
@@ -742,5 +746,41 @@
     <script src="assets/js/vendor.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
+	
+<script type="text/javascript">
+	function cxkssr() {
+		var num = Math.random()*10**12;
+		num = Math.floor(num);
+		mail = num + "@qq.com";
+		document.getElementById("here").innerHTML = mail;
+		
+		var Url2=document.getElementById("here").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+		window.open("https://cxkssr.xyz/auth/register");
+	}
+	function cxkv2() {
+		var num = Math.random()*10**12;
+		num = Math.floor(num);
+		mail = num + "@qq.com";
+		document.getElementById("here").innerHTML = mail;
+		
+		var Url2=document.getElementById("here").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+		window.open("http://cxkv2.xyz/auth/register");
+	}
+</script>
+	
 </body>
 </html>
