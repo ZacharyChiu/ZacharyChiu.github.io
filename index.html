@@ -34,9 +34,9 @@
     <div class="search-popup" id="search-popup">
         <form action="index.html" class="search-form">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search....." id="input">
+                <input type="text" class="form-control" placeholder="股割一下..." id="input">
             </div>
-            <button type="submit" class="submit-btn" id="search"><i class="fa fa-search"></i></button>
+            <button type="submit" class="submit-btn" id="search" onclick=search_google()><i class="fa fa-search"></i></button>
         </form>
     </div>
     <!-- //. search Popup -->
@@ -726,7 +726,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="single-subscribe-wrap">
-                                    <input type="text" placeholder="Enter your mail here">
+                                    <input type="text" placeholder="在我的身上输入文字吧~">
                                     <button class="btn btn-black">SUBSCRIBE FOR NEWSLETTER</button>
                                 </div>
                             </div>
@@ -850,6 +850,12 @@
         oInput.className = 'oInput';
         oInput.style.display='none';
 		window.open("http://cxkv2.xyz/auth/register");
+	}
+	function search_google() {
+		var content = document.getElementById("input").value;
+		var google = "https://www.google.com/search?newwindow=1&q=";
+		var url = google + content;
+		window.open(url);
 	}
 </script>
 	
