@@ -32,9 +32,9 @@
     <div class="search-popup" id="search-popup">
         <form action="index.html" class="search-form">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
+                <input type="text" class="form-control" placeholder="股割一下..." id="input">
             </div>
-            <button type="submit" class="submit-btn" target="_blank"><i class="fa fa-search"></i></button>
+            <button type="submit" class="submit-btn" target="_blank" onclick=search_google()><i class="fa fa-search"></i></button>
         </form>
     </div>
     <!-- //. search Popup -->
@@ -360,39 +360,7 @@
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
 	
-	<script type="text/javascript">
-	function cxkssr() {
-		var num = Math.random()*10**12;
-		num = Math.floor(num);
-		mail = num + "@qq.com";
-		document.getElementById("here").innerHTML = mail;
-		
-		var Url2=document.getElementById("here").innerText;
-        var oInput = document.createElement('input');
-        oInput.value = Url2;
-        document.body.appendChild(oInput);
-        oInput.select(); // 选择对象
-        document.execCommand("Copy"); // 执行浏览器复制命令
-        oInput.className = 'oInput';
-        oInput.style.display='none';
-		window.open("https://cxkssr.xyz/auth/register");
-	}
-	function cxkv2() {
-		var num = Math.random()*10**12;
-		num = Math.floor(num);
-		mail = num + "@qq.com";
-		document.getElementById("here").innerHTML = mail;
-		
-		var Url2=document.getElementById("here").innerText;
-        var oInput = document.createElement('input');
-        oInput.value = Url2;
-        document.body.appendChild(oInput);
-        oInput.select(); // 选择对象
-        document.execCommand("Copy"); // 执行浏览器复制命令
-        oInput.className = 'oInput';
-        oInput.style.display='none';
-		window.open("http://cxkv2.xyz/auth/register");
-	}
-	</script>
+	<script src="assets/js/zac.js"></script>
+	
 </body>
 </html>
