@@ -40,3 +40,12 @@ function search_google() {
 	var url = google + content;
 	window.open(url);
 }
+
+function trans(){
+	var content = document.getElementById("translate").value;
+	var u1 = "http://dict.youdao.com/search?q=";
+	var u2 = "&keyfrom=new-fanyi.smartResult";
+	var url = u1 + content + u2;
+	/* alert(url) */
+	window.open(url);
+}
