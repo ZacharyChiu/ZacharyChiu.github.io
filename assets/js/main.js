@@ -1,7 +1,7 @@
 ; (function ($) {
     "use strict";
 
-    $(document).ready(function () {
+    /* $(document).ready(function () { */
 
         /**-----------------------------
          *  Navbar fix
@@ -308,7 +308,7 @@
             }, 2000);
         });
 
-    });
+    /* }); */
 
     $(window).on("scroll", function() {
         /*---------------------------------------
