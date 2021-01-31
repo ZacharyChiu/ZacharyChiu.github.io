@@ -49,3 +49,33 @@ function trans(){
 	/* alert(url) */
 	window.open(url);
 }
+
+function pre_page(){
+	var content = document.getElementById("pageup").attributes["data-filter"].nodeValue;
+	var index = content.split('-')[1]*1;
+	if (index > 0){
+		index -= 1	
+	}
+	else{
+		alert('已经是第一页了，兄dei！')
+	}
+	var pu=document.getElementById("pageup").setAttribute("data-filter", '.cat-' + index);
+	var pd=document.getElementById("pagedown").setAttribute("data-filter", '.cat-' + (index));
+	/* alert('.cat-' + index) */
+	
+}
+
+function next_page(limit){
+	var content = document.getElementById("pagedown").attributes["data-filter"].nodeValue;
+	var index = content.split('-')[1]*1;
+	if (index < limit){
+	index += 1
+	}
+	else{
+		alert('我是有底线的，兄dei！')
+	}
+	var pd=document.getElementById("pagedown").setAttribute("data-filter", '.cat-' + index);
+	var pu=document.getElementById("pageup").setAttribute("data-filter", '.cat-' + (index));
+	/* alert('.cat-' + index) */
+	
+}
