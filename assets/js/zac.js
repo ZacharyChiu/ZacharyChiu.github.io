@@ -68,7 +68,7 @@ function pre_page(){
 function next_page(limit){
 	var content = document.getElementById("pagedown").attributes["data-filter"].nodeValue;
 	var index = content.split('-')[1]*1;
-	if (index < limit){
+	if (index < limit - 1){
 	index += 1
 	}
 	else{
