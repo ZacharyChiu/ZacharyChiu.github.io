@@ -263,10 +263,10 @@
                     </div>
                 </div>
 				<div class="col-lg-8">
-						<div class="thumb mb-4" id="AI">
-							<img src="http://hbimg.b0.upaiyun.com/54ccce1c69c16f9656a518a01b8c5ce41104af7e64c93-IOLlXA" alt="img">
-						</div>
+					<div class="thumb mb-4" id="AI">
+						<img src="http://hbimg.b0.upaiyun.com/54ccce1c69c16f9656a518a01b8c5ce41104af7e64c93-IOLlXA" alt="img">
 					</div>
+				</div>
 					<div class="col-lg-4">
 						<div class="sidebar-area">
 							<div class="widget widget-category">
@@ -282,58 +282,66 @@
 				<div class="col-lg-12">
 					
 					<h3>人工神经网络</h3>
+					
                     <div class="row">
 						<div class="col-lg-8">
-						<h4>以数字识别为例理解最简单的神经网络</h4>
-						<p>目的：识别一张28x28像素图像的图片中的数字</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/aa9973c3976c0e0eb4518ee1381b066f807a825b2b3f-3DuTcF" referrerpolicy="no-referrer"></p>
-						<p>神经网络其实就是一个<strong>参数超多的非线性函数</strong>。函数最基本的要素就是输入、输出。</p>
-						<p>这里，输入的是一个28x28=784像素的图像。输出是十个一位数字。</p>
-						<p>很容易得出，神经网络的<strong>输入层</strong>有<strong>784</strong>个神经元，每个神经元中存放一个0~1之间的数字，用于表示像素的灰度。<strong>输出层</strong>有<strong>10</strong>个神经元，神经元中存放一个0~1之间的数字，表示对应结果是正确答案的概率。</p>
-						<blockquote><p>神经元中存放的数字称为<strong>激活值</strong>(Activation)。</p>
-						</blockquote>
-						<p><img src="http://hbimg.b0.upaiyun.com/a40aff1751800ee807105d4119eb0a71d3f20d8b6394a-QNi8UL" referrerpolicy="no-referrer"></p>
-						<p>如上图，除了输入输出层，还有两层中间层（<strong>隐藏层</strong>），他们才是整个<strong>功能实现</strong>的主要承担者。</p>
-						<p>为什么是<strong>两层</strong>隐藏层？我们来分析一下。</p>
-						<p>输入层中全部的激活值组成的图案就是输入的图像，这层激活值会让下一层激活值产生某些特殊的图案，最终在输出层得到某种结果，输出层中最大的激活值就代表了神经网络做出的“选择”。</p>
-						<p>嗯……我们凭什么认为这样的几层网络可以实现我们所期望的功能？</p>
-						<p>回到数字识别这个案例上来，先想想，我们人类是怎样认出一个数字的。看看下面这个数字9。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/43a67c0f03d2184b3ed613bf34964dac1947eda914d6-oMR7wA" referrerpolicy="no-referrer"></p>
-						<p>我们看到的是一个圆圈，以及一个竖，这就是“9”这个数字的精髓。而数字“8”，则是两个圆圈。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/3241f385ecebada90cab6d778c101ca9b624fdd0ecc3-0Q05TJ" referrerpolicy="no-referrer"></p>
-						<p>于是我们就希望，用<strong>一层网络</strong>来专门识别<strong>笔划</strong>。</p>
-						<p>当输入图片的上部出现了一个圆圈的时候，某层隐藏层的某个神经元就会被点亮。其他笔划类似。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/10eeb3ceafd515492ae81c8177a7e19c94883e108c0b6-9aG1Kg" referrerpolicy="no-referrer"></p>
-						<p>可是……怎样识别一个笔画（比如说圆圈）呢？</p>
-						<p>一个笔画同样可以再拆分为更小的短边。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/7f40b06b05e68a2e9da7202572a8bf93f2b10f998102-uhZDgY" referrerpolicy="no-referrer"></p>
-						<p>于是我们就考虑用第二层网络来识别这些短边。或许这样，第二层网络中对应某短边的八到十个神经元被点亮后，就会进一步点亮第三层中对应上部圆圈的那个神经元，最终点亮输出层对应数字9的那个神经元。</p>
-						<p>接下的问题是，我们怎样把识别出的这些短边/笔划拼接起来，组成复合图案呢？</p>
-						<p>这项工作用需要借助不同层神经元之间的连接方式来实现。</p>
-						<p>让我们凑近一些，看看隐藏层中某一具体神经元。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/33693bd9a5fcd451f6256a8b4188990de6ee6a2a2c9d8-De6QbR" referrerpolicy="no-referrer"></p>
-						<p>如上图，第二层中的这个神经元A，我们预期让它负责识别输入图案中白色区域部分（如图右侧所示）的内容。</p>
-						<p>这里引入一个叫做<strong>权重</strong>的参数，她被施加在神经元A与输入层各个神经元之间的连接线上，可以将“权重”理解为神经元A与前层各个神经元的<strong>连接强度</strong>。</p>
-						<p>我们调整这784个权重的值，可以产生不同的图案（其实就是产生<strong>新的784个激活值</strong>）。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/ada68daea46d86c1de86830534ab9fa1acce3f25366dd-HY77lt" referrerpolicy="no-referrer"></p>
-						<p>权重可正可负，数量也正好是784个，所以我们也可以把她们看作是一张28x28的图像。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/66fe91f0648466bd1c3999da968732c4f4a277a51343f-Kb2fOo" referrerpolicy="no-referrer"></p>
-						<p>正权重标记为绿色，负权重标记为红色，越黑表示权重越接近于0。</p>
-						<p>我们把需要识别的区域设置成绿色，其周围则设置为红色。这样一来，目标区域越白，获得的正数越大，目标区域周围越黑，获得的负数也越小（因为这些地方激活值小），其他地方的权重设置为0（无关像素），如此一来，当对应图案出现时，最终所得的加权和就越大。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/dde6ac9467a327f7844fb881842ff69e52926ad4117a9-u7YDGN" referrerpolicy="no-referrer"></p>
-						<p>最终我们还需要把加权和压缩到0~1之间，这是激活值的取值范围。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/97a1207bff38b061452391120b24da7e94ad5cbe1af63-6QKChe" referrerpolicy="no-referrer"></p>
-						<p>我们通过一个函数来实现：Sigmoid函数。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/6d9985d790c1ca3339df1a56350d91ead311e524db78-2AHnpC" referrerpolicy="no-referrer"></p>
-						<blockquote><p>Tip：在深度网络中，sigmoid函数其实并不常用，过时了。</p>
-						<p>取而代之的是ReLU函数（线性整流函数），她在深度神经网络中的表现更好。</p>
-						</blockquote>
-						<p><img src="http://hbimg.b0.upaiyun.com/15c6577687346177bcbd526616bc0beaa4b3470ebfbf-4YRs0K" referrerpolicy="no-referrer"></p>
-						<p>此外，我们希望当像素点的亮度高于某个值时，才被激活，这里引入另一个参数“偏置(Bias)”</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/34945e662621bf56a3a1f110c30990bf40b181043f6be-oWnMYX" referrerpolicy="no-referrer"></p>
-						<p>所谓的训练神经网络，其实就是找到合适的权重和偏置。</p>
-						<p><img src="http://hbimg.b0.upaiyun.com/acd5e90eb813d3fe9fa97c685b8cdf0bccf7cbb584d0b-Yys7g2" referrerpolicy="no-referrer"></p>
-							
+							<div class="blog-details-inner">
+								<div class="blog-details-wrap">
+									<div class="blog-details-wrap">
+										<h4>以数字识别为例理解最简单的神经网络</h4>
+										<p>目的：识别一张28x28像素图像的图片中的数字</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/aa9973c3976c0e0eb4518ee1381b066f807a825b2b3f-3DuTcF" referrerpolicy="no-referrer"></p>
+										<p>神经网络其实就是一个<strong>参数超多的非线性函数</strong>。函数最基本的要素就是输入、输出。</p>
+										<p>这里，输入的是一个28x28=784像素的图像。输出是十个一位数字。</p>
+										<p>很容易得出，神经网络的<strong>输入层</strong>有<strong>784</strong>个神经元，每个神经元中存放一个0~1之间的数字，用于表示像素的灰度。<strong>输出层</strong>有<strong>10</strong>个神经元，神经元中存放一个0~1之间的数字，表示对应结果是正确答案的概率。</p>
+										<blockquote class="blockquote"><p>神经元中存放的数字称为<strong>激活值</strong>(Activation)。</p>
+										</blockquote>
+										<p><img src="http://hbimg.b0.upaiyun.com/a40aff1751800ee807105d4119eb0a71d3f20d8b6394a-QNi8UL" referrerpolicy="no-referrer"></p>
+										<p>如上图，除了输入输出层，还有两层中间层（<strong>隐藏层</strong>），他们才是整个<strong>功能实现</strong>的主要承担者。</p>
+										<p>为什么是<strong>两层</strong>隐藏层？我们来分析一下。</p>
+										<p>输入层中全部的激活值组成的图案就是输入的图像，这层激活值会让下一层激活值产生某些特殊的图案，最终在输出层得到某种结果，输出层中最大的激活值就代表了神经网络做出的“选择”。</p>
+										<p>嗯……我们凭什么认为这样的几层网络可以实现我们所期望的功能？</p>
+										<p>回到数字识别这个案例上来，先想想，我们人类是怎样认出一个数字的。看看下面这个数字9。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/43a67c0f03d2184b3ed613bf34964dac1947eda914d6-oMR7wA" referrerpolicy="no-referrer"></p>
+										<p>我们看到的是一个圆圈，以及一个竖，这就是“9”这个数字的精髓。而数字“8”，则是两个圆圈。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/3241f385ecebada90cab6d778c101ca9b624fdd0ecc3-0Q05TJ" referrerpolicy="no-referrer"></p>
+										<p>于是我们就希望，用<strong>一层网络</strong>来专门识别<strong>笔划</strong>。</p>
+										<p>当输入图片的上部出现了一个圆圈的时候，某层隐藏层的某个神经元就会被点亮。其他笔划类似。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/10eeb3ceafd515492ae81c8177a7e19c94883e108c0b6-9aG1Kg" referrerpolicy="no-referrer"></p>
+										<p>可是……怎样识别一个笔画（比如说圆圈）呢？</p>
+										<p>一个笔画同样可以再拆分为更小的短边。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/7f40b06b05e68a2e9da7202572a8bf93f2b10f998102-uhZDgY" referrerpolicy="no-referrer"></p>
+										<p>于是我们就考虑用第二层网络来识别这些短边。或许这样，第二层网络中对应某短边的八到十个神经元被点亮后，就会进一步点亮第三层中对应上部圆圈的那个神经元，最终点亮输出层对应数字9的那个神经元。</p>
+										<p>接下的问题是，我们怎样把识别出的这些短边/笔划拼接起来，组成复合图案呢？</p>
+										<p>这项工作用需要借助不同层神经元之间的连接方式来实现。</p>
+										<p>让我们凑近一些，看看隐藏层中某一具体神经元。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/33693bd9a5fcd451f6256a8b4188990de6ee6a2a2c9d8-De6QbR" referrerpolicy="no-referrer"></p>
+										<p>如上图，第二层中的这个神经元A，我们预期让它负责识别输入图案中白色区域部分（如图右侧所示）的内容。</p>
+										<blockquote class="blockquote"><p>这里引入一个叫做<strong>权重</strong>的参数，她被施加在神经元A与输入层各个神经元之间的连接线上，可以将“权重”理解为神经元A与前层各个神经元的<strong>连接强度</strong>。</p>
+										</blockquote>
+										<p>我们调整这784个权重的值，可以产生不同的图案（其实就是产生<strong>新的784个激活值</strong>）。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/ada68daea46d86c1de86830534ab9fa1acce3f25366dd-HY77lt" referrerpolicy="no-referrer"></p>
+										<p>权重可正可负，数量也正好是784个，所以我们也可以把她们看作是一张28x28的图像。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/66fe91f0648466bd1c3999da968732c4f4a277a51343f-Kb2fOo" referrerpolicy="no-referrer"></p>
+										<p>正权重标记为绿色，负权重标记为红色，越黑表示权重越接近于0。</p>
+										<p>我们把需要识别的区域设置成绿色，其周围则设置为红色。这样一来，目标区域越白，获得的正数越大，目标区域周围越黑，获得的负数也越小（因为这些地方激活值小），其他地方的权重设置为0（无关像素），如此一来，当对应图案出现时，最终所得的加权和就越大。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/dde6ac9467a327f7844fb881842ff69e52926ad4117a9-u7YDGN" referrerpolicy="no-referrer"></p>
+										<p>最终我们还需要把加权和压缩到0~1之间，这是激活值的取值范围。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/97a1207bff38b061452391120b24da7e94ad5cbe1af63-6QKChe" referrerpolicy="no-referrer"></p>
+										<p>我们通过一个函数来实现：Sigmoid函数。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/6d9985d790c1ca3339df1a56350d91ead311e524db78-2AHnpC" referrerpolicy="no-referrer"></p>
+										<blockquote class="blockquote"><p>Tip：在深度网络中，sigmoid函数其实并不常用，过时了。</p>
+										<p>取而代之的是ReLU函数（线性整流函数），她在深度神经网络中的表现更好。</p>
+										</blockquote>
+										<p><img src="http://hbimg.b0.upaiyun.com/15c6577687346177bcbd526616bc0beaa4b3470ebfbf-4YRs0K" referrerpolicy="no-referrer"></p>
+										<blockquote class="blockquote"><p>此外，我们希望当像素点的亮度高于某个值时，才被激活，这里引入另一个参数“偏置(Bias)”</p>
+										</blockquote>
+										<p><img src="http://hbimg.b0.upaiyun.com/34945e662621bf56a3a1f110c30990bf40b181043f6be-oWnMYX" referrerpolicy="no-referrer"></p>
+										<p>所谓的训练神经网络，其实就是找到合适的权重和偏置。</p>
+										<p><img src="http://hbimg.b0.upaiyun.com/acd5e90eb813d3fe9fa97c685b8cdf0bccf7cbb584d0b-Yys7g2" referrerpolicy="no-referrer"></p>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="sidebar-area">
