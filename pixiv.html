@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Pixiv</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- preloader area end -->
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Here</a>
+                            <ul class="sub-menu">
+                                <li><a href="#Top">Top</a></li>
+                                <li><a href="#AI" class="la la-arrow-up">人工智能</a></li>
+								<li><a href="#" class="la la-arrow-up"></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="webs.html">Webs</a>
+                        </li>
+						<li>
+                            <a href="knowledge.html">Knowledge</a>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Notes</a>
+                            <ul class="sub-menu">
+                                <li><a href="https://github.com/ZacharyChiu/notebook/new/main" target="_blank">Write</a></li>
+								<li><a href="https://github.com/ZacharyChiu/notebook/blob/main/ToDo.md" target="_blank">To Do</a></li>
+								<li><a href="https://github.com/ZacharyChiu/notebook/edit/main/Temp.md" target="_blank">Temp</a></li>
+                                <li><a href="https://github.com/ZacharyChiu/notebook/tree/main" target="_blank">List</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">About</a>
+                            <ul class="sub-menu">
+                                <li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io" target="_blank">Github Page</a></li>
+								<li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io/edit/main/index.html" target="_blank">Edit Homepage</a></li>
+                                <li><a href="https://codeload.github.com/ZacharyChiu/ZacharyChiu.github.io/zip/main" target="_blank">Codes Download</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class=""><a class="login-btn" href="#">Login</a></li>
+                        <li><a class="shopping-cart-btn" href="#"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <div class="breadcrumb-area" style="background-image:url('assets/img/breadcrumb/1.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <div class="section-title text-center">
+                            <h1 class="page-title">Pixiv</h1>
+                            <ul class="page-list">
+                                <li><a href="index.html">HOME</a></li>
+                                <li>DETAILS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+	
+	<section class="service-area bg-grey pd-top-66 pd-bottom-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="offer-wrap text-center">
+                        <h2>Pixiv <span>Collections </span></h2>
+						<p>Artists </p>
+                    </div>                  
+                </div>
+                <div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/101608/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/05/07/11/33/32/15740798_1f50b5900c371f6493d6001e6ed20288_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/101608/illustrations" target="_blank"><h6>山×２[101608]</h6></a><p>■山×2です。<br>■何かありましたらこちらまで<br>　begbeing◆gmail.com ...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/10227514/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/03/03/16/12/44/15475167_6c39b50dde20d525fd22422c20666aa9_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/10227514/illustrations" target="_blank"><h6>MIYA*KI[10227514]</h6></a><p>ゲームや書籍、TCGなどのイラスト依頼受け付けております。<br>依頼・連絡はgmailにお願いします。お仕事ください。。。<br> miyakiillust@gmail.com</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/10495320/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/01/12/07/24/25/11996565_05d32d8788bda5d9b98f328f0d462a83_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/10495320/illustrations" target="_blank"><h6>かやはら[10495320]</h6></a><p>フリーランスのイラストレーターです。<br>※個人の方、成人向けのご依頼は承っておりません。<br>また申し訳ございませんがご依頼に関するご連絡以外は返信致しかねます。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/10710834/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2015/12/18/12/41/23/10255400_34779fe3b93be16bdf3397902dd8ebb3_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/10710834/illustrations" target="_blank"><h6>Novelance[10710834]</h6></a><p>-唯一指定郵箱：novelance@foxmail.com-<br><br>Chinese|English</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1079073/illustrations" target="_blank"><img src="https://s.pximg.net/common/images/no_profile.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1079073/illustrations" target="_blank"><h6>ㅤ[1079073]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/12845810/illustrations" target="_blank"><img src="#" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/12845810/illustrations" target="_blank"><h6>xxx[12845810]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/13038060/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/09/04/11/43/50/19302586_61f5012d8f8bf3b1bc44d2246fdac034_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/13038060/illustrations" target="_blank"><h6>灰雨ハイウ★[13038060]</h6></a><p>たまには絵をアップロード、メインはツイッターをやっています。<br>日本語ヘタクソな中国人です<br>よろしくお願いいたします。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/13507477/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/06/10/09/58/45/12678240_48b6bda3a4c59fab96a31df1eea213c4_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/13507477/illustrations" target="_blank"><h6>Bor狼小叁[13507477]</h6></a><p>野生原画师一只，低产坑多。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/135302/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/08/05/22/23/39/14588702_0926af3bda908b844465eecec2242f55_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/135302/illustrations" target="_blank"><h6>ゆきさめ[135302]</h6></a><p>フォロー、ブクマ、タグ等有難うございます<br><br>ご依頼・御用あればこちらに↓...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1370072/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2013/12/26/18/53/34/7219213_5038dafba5c688460faa42bb41e10294_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1370072/illustrations" target="_blank"><h6>Evan揚[1370072]</h6></a><p>日本语は下手で、まだ勉强しています。<br>我的個人主頁：Twitter：https://twitter.com/Evanyang59<br>weibo：http://weibo.com/u/1507095177...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1397134/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2015/03/11/00/17/30/9074928_b61dcff4c5633ae6569f2e5a106cafe1_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1397134/illustrations" target="_blank"><h6>江戸屋犬八[1397134]</h6></a><p>mail<br>i_n_u_8@yahoo.co.jp<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1410598/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/12/24/17/36/50/16745050_9ed1e56ec7223483fded9a53c015fce0_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1410598/illustrations" target="_blank"><h6>tarou2[1410598]</h6></a><p>アニメーター、イラストレーター <br><br>仕事履歴...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/14314809/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2016/12/06/23/41/26/11840206_0221b6a7ef072863d24db5846d45bb39_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/14314809/illustrations" target="_blank"><h6>罗德花园[14314809]</h6></a><p>我是新人画师</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/15086299/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/04/08/21/18/28/15626770_23f870e49422c095c85cfa390270fff6_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/15086299/illustrations" target="_blank"><h6>ɴᴀʀᴜᴇ/なるゑ[15086299]</h6></a><p>見ていただき有がお等ございます<br><br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/152240/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2009/11/17/02/43/50/1240120_21b460c71dc691101f2f3e36f477adb8_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/152240/illustrations" target="_blank"><h6>saitom[152240]</h6></a><p>個人サークル『猫マル商店』を立ち上げました。<br>よろしくお願いします。<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1554775/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/10/25/02/23/09/19561461_ec35c7a9f72872ae2bacd5cf939cbbe4_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1554775/illustrations" target="_blank"><h6>米山舞[1554775]</h6></a><p>イラストレーター、アニメーター。<br>お仕事のご依頼は上記サイトからお願い致します。<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/15909278/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/02/20/00/39/09/15420279_2b88e6741fbb22edf5a9b0529c470a5d_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/15909278/illustrations" target="_blank"><h6>モグモ[15909278]</h6></a><p>よろしくお願いします。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/16221690/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/08/30/12/54/08/19276014_113213abcf1eee511e50fad90f0e5035_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/16221690/illustrations" target="_blank"><h6>夏鈴糖[16221690]</h6></a><p>お気に入り、コメント等ありがとうございます。<br>大変嬉しいです！<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/16275159/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/08/19/11/17/12/19210111_5a8bedc10c6d1b756cfa6d3d6ba538c4_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/16275159/illustrations" target="_blank"><h6>なで肩[16275159]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/169098/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2015/01/30/12/31/46/8905011_dfd2463b1b3fda6ce7b1194326cc2d1e_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/169098/illustrations" target="_blank"><h6>秋赤音[169098]</h6></a><p>お仕事の依頼などありましたらこちらまで。info◆cochitora.com<br>（◆→@）<br>pixivのメッセージには基本的に返信はしておりません。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/17007/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/09/08/06/50/07/19324770_dec1630d9c5d33d69db86072f3c5f550_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/17007/illustrations" target="_blank"><h6>田中寛崇[17007]</h6></a><p>いい加減Pixivの情報も仕事用のプロフィールに紐付けようと思い名前を作家名にしました。<br><br>よろしくお願い致します。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/17429/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/02/01/17/04/59/17840654_d02a21d9f01fcebd7d3062266a287e2e_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/17429/illustrations" target="_blank"><h6>LAM[17429]</h6></a><p>イラスト仕事等のご依頼、ご相談は下記アドレスによろしくお願いします。<br>※現在個人様からのご依頼は停止しております<br>ramchop1122@gmail.com...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/17652171/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/03/08/20/42/15/12242822_8fa2419481cff321d5367ad233316f32_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/17652171/illustrations" target="_blank"><h6>からん[17652171]</h6></a><p>魚が食べたい</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/177784/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/05/02/10/34/17/18458158_623bd95bf01e0389b31061a97e05904e_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/177784/illustrations" target="_blank"><h6>森倉円[177784]</h6></a><p>イラストレーターです。<br><br>コメント・評価ありがとございます！活力もりもり湧いてきます。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/187932/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2010/06/23/14/44/14/1893835_d40a400c11b9e0f096627ce9650d5430_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/187932/illustrations" target="_blank"><h6>pl-plplp[187932]</h6></a><p>pixiv!!<br><br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/191346/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2015/03/24/22/50/09/9137190_566b6039a7e8039e73aaea4bd0c5adff_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/191346/illustrations" target="_blank"><h6>ピジャ(ピアニッシモ)[191346]</h6></a><p>　　　／￣￣＼<br>　／ﾉ(　 _ノ　　＼　　うおおおおおおおおおおおお！！！！<br>　|　⌒　(（:。;）(;ﾟ）...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/19351/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2010/11/28/23/31/08/2458931_c15add5b24e0736de366882c515465ba_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/19351/illustrations" target="_blank"><h6>おぐち[19351]</h6></a><p>コメントやブックマークしてくださった方、ありがとうございます。僕は今日も元気です。<br><br>お仕事の依頼など、随時募集しております。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/197076/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/08/23/20/46/35/13094356_c4cf36f2c48aae593d812f29cfe398b3_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/197076/illustrations" target="_blank"><h6>ぴょん吉[197076]</h6></a><p>活動内容<br>・成人向け漫画<br>・イラスト等...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/1980643/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2013/12/04/23/36/36/7135633_c9e3a8945b2ac00149eec8ce8ac6b5a9_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/1980643/illustrations" target="_blank"><h6>ASK[1980643]</h6></a><p>不允许二次加工，转载请标明出处<br>私信不常看非常抱歉<br>工作相关请邮件askzy9464@gmail.com</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/19896569/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/09/16/06/16/40/19365871_70d640fc3e0efbebf3e858728e1e043f_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/19896569/illustrations" target="_blank"><h6>慧子[19896569]</h6></a><p>こんにちは！</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/2033916/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/08/30/12/58/46/13134261_65cec617fdd66dc6e3d9ccfcb7f5db1d_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/2033916/illustrations" target="_blank"><h6>あすてろid[2033916]</h6></a><p>メッセージに返信はしません。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/205294/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2014/06/30/14/04/32/8059215_0b90012bc6c5f118fba85369604d4bb2_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/205294/illustrations" target="_blank"><h6>須田彩加[205294]</h6></a><p>フリーランスのイラストレーターとして活動しています。<br><br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/22190423/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/07/22/22/15/36/12903446_a26051da85dbc72949c8940a079ae7e8_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/22190423/illustrations" target="_blank"><h6>サコ[22190423]</h6></a><p>サコです！<br>福岡でイラストレーターをしています<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/27526/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2010/03/01/23/56/13/1535320_857ee13b3967789e289bf3910df40d9f_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/27526/illustrations" target="_blank"><h6>友野るいRui Tomono[27526]</h6></a><p>フリーのイラストレーターです。<br>カードイラスト、キャラクターデザイン、イメージボード、コンセプトアートも描きます。<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/2872379/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2016/04/20/17/45/41/10828657_e884e94cca9a983da8e3c5b9f41712a1_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/2872379/illustrations" target="_blank"><h6>青紅 ao+beni[2872379]</h6></a><p>【イベント参加予定】<br>C97 ３日目(12/30) 西Ａ29b<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/28741874/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/08/06/15/10/09/19125589_13bdc78f90b7ce30ed0059bafbd8a9f3_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/28741874/illustrations" target="_blank"><h6>chingyeh[28741874]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/290518/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2011/05/07/01/34/30/3091782_1dab351adcca5fba99559425a6127d10_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/290518/illustrations" target="_blank"><h6>ED[290518]</h6></a><p>＾＾</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/29268484/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/04/21/04/56/00/18378743_c2150d5a98660eb78cc2c5e369d5bded_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/29268484/illustrations" target="_blank"><h6>omao[29268484]</h6></a><p>白と黒が好きなイラストレーター。■最近の仕事  YOASOBI『MIKUNOYOASOBI』ジャケット、ツミキ『トオトロジイダウトフル』MV ◾️連絡はこちらにお願いします→ omao51061954@gmail.com</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/29490268/illustrations" target="_blank"><img src="https://s.pximg.net/common/images/no_profile.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/29490268/illustrations" target="_blank"><h6>ぽんかん⑧[29490268]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/295806/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2015/04/17/16/08/43/9246316_ca3a7b5dab387c7fdf208a3c4028f7fb_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/295806/illustrations" target="_blank"><h6>天之火[295806]</h6></a><p>Weibo http://www.weibo.com/p/1005053183546792</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/30851640/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/10/05/23/00/30/14862165_0b1a387ef3c938dd9ede8be06035a9ca_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/30851640/illustrations" target="_blank"><h6>ガガイモ[30851640]</h6></a><p>有効な活用法がよく分かってません。<br>ツイッターに投稿した画像置き場として使ってます。<br>そんな感じです。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/3384404/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/04/10/20/01/05/14077934_df136ab55825bc335ee2c3b32879fbae_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/3384404/illustrations" target="_blank"><h6>sakimichan[3384404]</h6></a><p>私はカナダの出身ですので、私は翻訳プログラムを使用しています。私の仕事が好きでもっと欲しいなら、<br>__________<br>https://www.patreon.com/sakimichan?ty=a...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/341407/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/11/01/19/30/24/16487877_3f51a8477375663eb2e977f6458bd98d_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/341407/illustrations" target="_blank"><h6>DANGERDROP[341407]</h6></a><p>☓︵☓<br>2007-2021 ©dangerdrop All rights reserved.​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​​ ​​ ​​ ​​ ​​<br>Reproduction is...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/4073735/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/06/25/15/51/01/14404483_3b9aded963718ffd473f1489a15579af_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/4073735/illustrations" target="_blank"><h6>吉田誠治[4073735]</h6></a><p>背景グラフィッカ / イラストレータ</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/4221847/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/12/30/10/29/29/19908627_9d36d46fcb614e0cbf941698703c2af8_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/4221847/illustrations" target="_blank"><h6>ねこめたる[4221847]</h6></a><p>お気に入りやブックマークやコメント　ありがとうございます<br><br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/4338012/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/11/15/08/09/24/19670750_c735c3c5dfd1299a26faf92b7a81064e_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/4338012/illustrations" target="_blank"><h6>hews[4338012]</h6></a><p>R18 Illustrator, sometimes safe</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/4395/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/07/07/17/10/23/15978315_0254230ddc35a2bb29f5c5f7869ecf9a_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/4395/illustrations" target="_blank"><h6>JNTHED💫[4395]</h6></a><p>WORKS:<br><br>"Boktai2" Character Design | Billie Eilish MV "you should see me in a crown" Spider Design | "METAL GEAR" series Ex 2D Artist | MONSTER STRIKE THE ANIMATION Image board | JAXA "SPACE F...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/45656167/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/05/15/21/51/46/18623011_cd54350157fb5c152046f56cbd18826f_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/45656167/illustrations" target="_blank"><h6>thatpersonaguy[45656167]</h6></a><p>Just a small side project that got out of hand.<br><br>If you 'd like to support this profile I'd appreciate it. If not, that's cool too. ❤️...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/483730/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2021/03/28/23/41/49/20437119_59ce94ccf89b7009d258c2ece756b498_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/483730/illustrations" target="_blank"><h6>あるてら[483730]</h6></a><p>2019年より<br>フリーランスイラストレーターとして<br>本格的に活動開始しました。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/5130774/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/08/17/14/10/15/14647485_c4dbe12b24384eec1c2b6d1bf01f2953_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/5130774/illustrations" target="_blank"><h6>SWAV[5130774]</h6></a><p>フリーランスイラストレーター。<br>ご連絡等は以下アドレスにお願いします。<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/5304046/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/11/24/22/05/40/15052761_ba603f9922443f84cf12789c3d1107d6_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/5304046/illustrations" target="_blank"><h6>magako[5304046]</h6></a><p>2021年7月以降の全年齢向けのお仕事募集しております。<br>(個人様のVtuber用デザインと立ち絵のご依頼はストップさせていただいております、申し訳ございません；)<br>下記連絡先へお願い致します。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/57209705/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/07/30/11/56/57/19081756_49fbe0356fc7b3fd12de274843ee24e7_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/57209705/illustrations" target="_blank"><h6>Belgeist[57209705]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/57770598/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/08/11/18/34/33/19158984_f1852c8eadf2f2eef31bfdb38c37ebcb_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/57770598/illustrations" target="_blank"><h6>CLT[57770598]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/612602/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2016/07/30/01/45/00/11268851_0ebc537699e6670cb11ee50f31c7e274_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/612602/illustrations" target="_blank"><h6>しゅがお[612602]</h6></a><p>服と動物が好きです。<br><br>現在マイピクの申請や絵の使用に関してのメッセージに関しましてはお返事を致しておりませんのでご了承ください。...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/6148565/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/12/26/15/59/09/16753037_90f47de6be9e7fcfccc46f0132566e71_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/6148565/illustrations" target="_blank"><h6>くっか[6148565]</h6></a><p>見ていただき<br>ありがとうございます₍ ᐢ. ̫ .ᐢ₎<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/6210796/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/09/14/10/19/08/14773702_ae2f1806cc39cd6a1d91b0e451321002_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/6210796/illustrations" target="_blank"><h6>よむ[6210796]</h6></a><p>何卒、よろしくお願いします。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/63950/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2018/09/27/11/36/56/14826015_0ae89d55a2ae45b5c6048e5ce2a7eae4_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/63950/illustrations" target="_blank"><h6>POKImari[63950]</h6></a><p>【連絡先】<br>pokizm0827★gmail.com（★→@）<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/6558698/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2021/03/15/03/32/07/20359533_74b079be00fb724ad35b54f43281547e_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/6558698/illustrations" target="_blank"><h6>siki[6558698]</h6></a><p>chyoell@naver.com</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/6662895/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2016/01/11/21/46/50/10371466_80f6ad67eab3b8abd44a2fb74ddd1ba1_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/6662895/illustrations" target="_blank"><h6>ATDAN-[6662895]</h6></a><p>蛋<br>仅非商业用,禁止非授权转载,禁止B站转载,印刷/二次加工禁止,禁止用于B站视频投稿封面及内容.</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/74184/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2017/04/27/10/00/38/12474975_a0a699ea19f387df0f98bc5a9b7d26d3_170.png" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/74184/illustrations" target="_blank"><h6>零＠通販始めた[74184]</h6></a><p>零\レイです、中国人、よろしくw<br>難しい英語おk、簡単な日本語おk。<br>爱：魂音泉/钢/ヘタリア/米英/天元/klk/宇宙兄弟/DRRR!!/银魂/夏战/荒川UB/One Piece/Peacemaker/DOGS/Cencoroll/FATE...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/777703/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2014/12/27/23/58/12/8768507_e6187f21c18c588b4cf74d2cff6ff5fd_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/777703/illustrations" target="_blank"><h6>neco[777703]</h6></a><p>ふつつか者ですがよろしくお願いします｡<br><br>※Pixivメッセージはあまり返信致しません。</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/8350338/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2020/08/12/09/55/48/19163422_e432da7ed940018c18f81f976da36ada_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/8350338/illustrations" target="_blank"><h6>GUWEIZ[8350338]</h6></a><p>:D</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/83967/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2014/04/12/22/08/47/7732855_aeccae6fc51278e6be6f7e1462a10ee4_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/83967/illustrations" target="_blank"><h6>so品[83967]</h6></a><p>描きます。<br><br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/84705/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2014/06/25/17/28/45/8038076_4a3442274f19db8b97870d58ea7f7586_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/84705/illustrations" target="_blank"><h6>Mechamania[84705]</h6></a><p>http://t.sina.com.cn/mosthika</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/9429014/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2019/11/23/15/47/02/16574171_fd6029bf6abeb2698be4f66afec70372_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/9429014/illustrations" target="_blank"><h6>絵を描くPETER[9429014]</h6></a><p></p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/9459043/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2021/06/07/08/01/39/20832484_5523701d4c22032beb77307f914bb9f8_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/9459043/illustrations" target="_blank"><h6>Siu[9459043]</h6></a><p>連絡先➡siu000207@gmail.com　<br>Fanbox➡︎ https://www.pixiv.net/fanbox/creator/9459043<br>...</p></div></div></div></div>
+<div class="col-lg-6 col-md-6"><div class="single-service-wrap"><div class="media"><div class="thumb"><a href="https://pixiv.net/users/95461/illustrations" target="_blank"><img src="https://i.pximg.net/user-profile/img/2016/08/03/01/29/55/11288081_5e5c3dbbaf0e1208be8c0ac5bbf4ccae_170.jpg" alt="img"></a></div><div class="media-body"><a href="https://pixiv.net/users/95461/illustrations" target="_blank"><h6>浪人[95461]</h6></a><p>ショタコン</p></div></div></div></div>
+
+				
+				
+            </div>
+        </div>
+    </section>
+    <!-- Service-Area End-->
+
+    <!-- single-blog-Area Start-->
+    <section class="single-blog-area pd-top-80 pd-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog-details-inner">
+                        <div class="thumb mb-4">
+                            <img src="http://hbimg.b0.upaiyun.com/1296a9b7cb1c7e86295841cbfc4c7fd2ddda548a89e44-HdJCZJ" alt="img">
+                        </div>
+                        <div class="blog-details-wrap">
+                            <div class="meta">
+                                <span class="author">
+                                    <a href="#"><i class="fas fa-user" aria-hidden="true"></i>
+                                    Admin</a>
+                                </span>
+                                <span class="date">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    15/10/2021
+                                </span>
+                            </div>
+                            <h4><a href="#">Table lampe 1562 LTG modal</a></h4>
+                            <p>It in adapted natural hastily is justice. Six draw you him full not mean evil. Shy occasional terminated insensible and inhabiting gay. So know do fond to half on. Now who promise was justice new winding. In finished on he speaking suitable advanced if. Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs led certainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart turned hearts as me wished. Therefore allowance too perfectly gentleman supposing man his now. Families goodness all eat out bed steepest servants.</p>
+
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur pariatur accusantium veniam, magnam odio simili</p>
+                            </blockquote>
+
+                            <p class="mb-4">Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                            <div class="gallery-wrap mb-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/2.png" alt="img">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="assets/img/blog/3.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>                            
+                            <p>Boy happiness sportsmen say prevailed offending concealed nor was provision. Two before narrow not relied how except moment myself. Dejection assurance mrs ertainly. So gate at no only none open. Betrayed at properly it of graceful on. Dinner abroad am depart ye turned hearts as me wished. Therefore allowance too perfectly gfsfd fpposing man his now. Families goodness all eat out bed steepest servants.</p>
+                        </div>
+                    </div>
+                   
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <!-- single-blog-Area End-->
+
+    <!-- subscribe-Area Start-->
+    <section class="subscribe-area pd-top-80 pd-bottom-80" style="background: url(assets/img/newsletter/bg.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="subscribe-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="single-subscribe-wrap">
+                                    <input type="text" placeholder="Enter your mail here">
+                                    <button class="btn btn-black">SUBSCRIBE FOR NEWSLETTER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe-Area end-->
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget">
+                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
+                        <p>869, Miyan road, Y4 456 Mona Town.</p>
+                        <p>Office No 3456.</p>
+                        <p>info@example.com</p>
+                        <p class="m-0">+234-58286909</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">Links.</h4>
+                        <ul>
+                            <li><a href="#">LED light source</a></li>
+                            <li><a href="#">Pendant Lamp</a></li>
+                            <li><a href="#">Floor Lamp</a></li>
+                            <li><a href="#">LED Pendant Lamp</a></li>
+                            <li><a href="#">Table Lamp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget widget widget_link">
+                        <h4 class="widget-title">About Us.</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">My account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget widget widget_contact">
+                        <h4 class="widget-title">Contact Us.</h4>
+                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+                        <ul class="social-area">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!--Footer bottom-->
+    <div class="footer-bottom footer-bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-area">
+                        <p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>                        
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <!--Footer bottom-->        
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="la la-arrow-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
