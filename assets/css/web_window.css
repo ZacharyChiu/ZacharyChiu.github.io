@@ -1,0 +1,135 @@
+body{
+	display: block;
+	background:#eee;
+}
+
+
+ul.menu{
+	list-style-type: none;
+	position:fixed;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+	height:100%
+    background-color: #fff;
+}
+li.menu a{
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+	text-align:center
+}
+li.menu a.active{
+	background-color: #fff;
+    color: #04B4AE;
+}
+li.menu a:hover:not(.active) {
+    background-color: #01DFA5;
+    color: white;
+}
+
+div.menu_foot{
+	width:10%;
+	position: fixed;
+	bottom:0;
+}
+div.menu_foot span{
+	display:inline-block;
+	background:#eee;
+	text-align:center;
+	font-size:60%;
+	color:#000;
+}
+
+div.h{
+	float:left;
+}
+
+h5.category{
+	margin: 0;
+	font-size:120%;
+	text-align:center;
+}
+
+
+li.bottom{
+	 position:absolute;
+}
+
+
+div.main_area{
+	margin-left:10%;
+	width:90%;
+	height:100%;
+	border:none;
+	border-radius:10px;
+	/* background:#EFFBF8; */
+	background:#fff;
+	padding:1px 1px
+	
+}
+
+
+/* 瀑布流 */
+div.masonry{
+	column-count:3;
+	column-gap:0;
+}
+div.item{
+	break-inside: avoid;
+	box-sizing:border-box;
+	padding:10px;
+	margin:10px;
+	background:#EEE;
+	border-radius:10px;
+	color:#04B4AE;
+}
+img.bar {
+	border-radius: 10px;
+	max-width: 100%;
+    height: auto;
+}
+
+/* 网页收藏夹列表 */
+ul.webs{
+	list-style-type: none;
+	/* position:fixed; */
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
+	height:100%;
+    background-color: #fff;
+	text-align:center;
+}
+li.webs a{
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li.webs a.active{
+	background-color: #fff;
+    color: #04B4AE;
+}
+li.webs a:hover:not(.active) {
+    
+	background-color: #01DFA5;
+    color: white;
+}
+
+button.v2{
+	border:none;
+	background:#eee;
+	padding:5px 10px;
+}
+/* button.v2:hover:not(.active) {
+    
+	background-color: #01DFA5;
+    color: white; */
+
+img.now_tag_ui{
+	width:30px;
+	height:30px;
+	padding: 8px 16px;
+}
