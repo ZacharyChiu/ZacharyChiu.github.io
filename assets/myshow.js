@@ -35,10 +35,58 @@ function openDialog(event){
 	fttag.innerHTML = tags.innerHTML;
 }
 
+
 function closeDialog(){
 	document.getElementById('f01').style.display='none';
 	document.getElementById('f02').style.display='none';
 }
+
+
+function smaller(){
+	var liu = document.querySelector('.masonry');
+	var st = getComputedStyle(liu);
+	var now_num = parseInt(st['column-count']);
+	var all_liu = document.getElementsByClassName('masonry');
+	
+	var  el = window.document.body; //声明一个变量，默认值为body
+	window.document.body.onmouseover =  function (event){
+	   el = event.target; //鼠标每经过一个元素，就把该元素赋值给变量el
+	   // console.log( '当前鼠标在' , el,  '元素上' ); //在控制台中打印该变量
+	   //console.log('B', document.getElementById(el.id).style.columnCount); //在控制台中打印该变量
+	}
+	for(i=0; i<all_liu.length; i++){
+			document.getElementById(all_liu[i].id).style.columnCount = now_num+1;
+			//console.log('>>第',i,'个瀑布流<<')
+		}
+	console.log(parseInt(st['column-count'])+1);
+}
+
+function bigger(){
+	var liu = document.querySelector('.masonry');
+	var st = getComputedStyle(liu);
+	var now_num = parseInt(st['column-count']);
+	var all_liu = document.getElementsByClassName('masonry');
+	
+	var  el = window.document.body; //声明一个变量，默认值为body
+	window.document.body.onmouseover =  function (event){
+	   el = event.target; //鼠标每经过一个元素，就把该元素赋值给变量el
+	   // console.log( '当前鼠标在' , el,  '元素上' ); //在控制台中打印该变量
+	   //console.log('B', document.getElementById(el.id).style.columnCount); //在控制台中打印该变量
+	}
+	
+	if(now_num > 1){
+		// document.getElementById('liu').style.columnCount = now_num-1;
+		//console.log('A',all_liu[0].id);
+		console.log(now_num-1);
+		for(i=0; i<all_liu.length; i++){
+			document.getElementById(all_liu[i].id).style.columnCount = now_num-1;
+			// console.log('>>第',i,'个瀑布流<<')
+		}
+		
+		
+	}
+}
+
 
 function hotKey(){
 	switch(event.which){
@@ -47,49 +95,12 @@ function hotKey(){
 			break;
 		case 83:
 			// S键缩小视图
-			var liu = document.querySelector('.masonry');
-			var st = getComputedStyle(liu);
-			var now_num = parseInt(st['column-count']);
-			var all_liu = document.getElementsByClassName('masonry');
-			
-			var  el = window.document.body; //声明一个变量，默认值为body
-			window.document.body.onmouseover =  function (event){
-			   el = event.target; //鼠标每经过一个元素，就把该元素赋值给变量el
-			   // console.log( '当前鼠标在' , el,  '元素上' ); //在控制台中打印该变量
-			   //console.log('B', document.getElementById(el.id).style.columnCount); //在控制台中打印该变量
-			}
-			for(i=0; i<all_liu.length; i++){
-					document.getElementById(all_liu[i].id).style.columnCount = now_num+1;
-					//console.log('>>第',i,'个瀑布流<<')
-				}
-			console.log(parseInt(st['column-count'])+1);
+			smaller();
 			break;
 			
 		case 87:
 			// W键放大视图
-			var liu = document.querySelector('.masonry');
-			var st = getComputedStyle(liu);
-			var now_num = parseInt(st['column-count']);
-			var all_liu = document.getElementsByClassName('masonry');
-			
-			var  el = window.document.body; //声明一个变量，默认值为body
-			window.document.body.onmouseover =  function (event){
-			   el = event.target; //鼠标每经过一个元素，就把该元素赋值给变量el
-			   // console.log( '当前鼠标在' , el,  '元素上' ); //在控制台中打印该变量
-			   //console.log('B', document.getElementById(el.id).style.columnCount); //在控制台中打印该变量
-			}
-			
-			if(now_num > 1){
-				// document.getElementById('liu').style.columnCount = now_num-1;
-				//console.log('A',all_liu[0].id);
-				console.log(now_num-1);
-				for(i=0; i<all_liu.length; i++){
-					document.getElementById(all_liu[i].id).style.columnCount = now_num-1;
-					// console.log('>>第',i,'个瀑布流<<')
-				}
-				
-				
-			}
+			bigger();
 			break;
 		
 		case 72:
