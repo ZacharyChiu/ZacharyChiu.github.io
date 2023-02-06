@@ -19,50 +19,52 @@ h5.category{
 
 /* 导航栏 */
 /* -------------------------------- */
-#guide{
-    width:calc(100vw);
-    height:50px;
-    margin:20px auto;
+.menu {
+position: fixed;
+height: calc(3vh);
+background-color: #00000010;
+border-radius: 10px;
 }
-#guide ul li{
-    position:relative;
-    float:left;
-    width:calc(15vw);
-    height:50px;
-    text-align:center;
-    line-height:50px;
-    background:#0000;
+
+
+/* 搜索框 */
+/* -------------------------------- */
+input, button {
+	border: none;
+	outline: none;
 }
-#guide ul li a:before{
-    content:"[";
-    margin-right:10px;
-    transform:translateX(20px);
-    -webkit-transform:translateX(20px);
-    -moz-transform:translateX(20px);
-    -ms-transform:translateX(20px);
-    
+
+input {
+	width: 100%;
+	height: 42px;
+	padding-left: 13px;
+	padding-right:46px;
 }
-#guide ul li a:after{
-    content:"]";
-    margin-left:10px;
-    transform:translateX(-20px);
-    -webkit-transform:translateX(-20px);
-    -moz-transform:translateX(-20px);
-    -ms-transform:translateX(-20px);
+
+button {
+	height: 42px;
+	width: 42px;
+	cursor: pointer;
 }
-#guide ul li a:before,#guide ul li a:after{
-    display:inline-block;
-    opacity:0;
-    transition:transform 0.3s, opacity 0.2s;
-    -moz-transition:transform 0.3s, opacity 0.2s;
-    -webkit-transition:transform 0.3s, opacity 0.2s;
-    -ms-transition:transform 0.3s, opacity 0.2s;
+
+
+.shbar input, .shbar button {
+	border-radius: 3px;
 }
-#guide ul li a:hover::before,#guide ul li a:hover::after,#guide ul li a:focus::before,#guide ul li a:focus::after {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    transform: translateX(0px);
+
+.shbar button {
+	height: 26px;
+	width: 26px;
+	top: 8px;
+	right: 8px;
+	background: #04B4AE;
+}
+.shbar button:before {
+	content: "\f105";
+	font-family: FontAwesome;
+	font-size: 20px;
+	font-weight: bold;
+	background: #04B4AE;
 }
 
 
