@@ -42,6 +42,7 @@ function closeDialog(){
 }
 
 
+
 function smaller(){
 	var liu = document.querySelector('.masonry');
 	var st = getComputedStyle(liu);
@@ -87,6 +88,32 @@ function bigger(){
 	}
 }
 
+function showR18(){
+	var all_r18 = document.getElementsByClassName('r18');
+	var css_r18 = document.querySelector('.r18');
+			
+	for(i=0; i<all_r18.length; i++){
+		document.getElementById(all_r18[i].id).style.display = 'block';
+		}
+}
+
+function hideR18(){
+	var all_r18 = document.getElementsByClassName('r18');
+	for(i=0; i<all_r18.length; i++){
+		document.getElementById(all_r18[i].id).style.display = 'none';
+		}
+}
+
+function setSize(num){
+	// var liu = document.querySelector('.masonry');
+	// var st = getComputedStyle(liu);
+	// var now_num = parseInt(st['column-count']);
+	var all_liu = document.getElementsByClassName('masonry');
+	for(i=0; i<all_liu.length; i++){
+		document.getElementById(all_liu[i].id).style.columnCount = num;
+	}
+}
+
 
 function hotKey(){
 	switch(event.which){
@@ -104,7 +131,18 @@ function hotKey(){
 			break;
 		
 		case 72:
+			// H键返回首页
 			window.location.href = "MyWork.html";
+			break;
+			
+		case 82:
+			// R键显示r18内容
+			showR18();
+			break;
+			
+		case 67:
+			// C键隐藏r18内容
+			hideR18();
 			break;
 		default:
 	}
