@@ -1,499 +1,401 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Zac的正经导航</title>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
-
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+	<title>时间线</title>
 </head>
 <body>
-
-    <!-- preloader area start -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
-        </div>
-    </div>
-    <div class="body-overlay" id="body-overlay"></div>
-    <!-- preloader area end -->
-
-    <!-- search popup area start -->
-    <div class="search-popup" id="search-popup">
-        <form action="index.html" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="股割一下..." id="input">
-            </div>
-            <button type="submit" class="submit-btn" target="_blank" onclick=search_google()><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    <!-- //. search Popup -->
-
-    <!-- navbar start -->
-    <div class="navbar-area">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container nav-container">
-                <div class="responsive-mobile-menu">
-                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" 
-                    aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-left"></span>
-                        <span class="icon-right"></span>
-                    </button>
-                </div>
-                <div class="logo">
-                    <a class="main-logo" href="index.html"><img src="assets/img/logo.png" alt="img"></a>
-                </div>
-				
-                <div class="nav-right-part nav-right-part-mobile">
-                    <ul>
-                        <li><a class="search header-search" href="#" target="_blank"><i class="fa fa-search"></i></a></li>
-                        <li class=""><a class="login-btn" href="#">Login</a></li>
-                        <li><a class="shopping-cart-btn" href="#" target="_blank"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
-                    </ul>
-					
-                </div>
-                <div class="collapse navbar-collapse" id="themefie_main_menu">
-                    <ul class="navbar-nav menu-open">
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Homepage</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="webs.html">Webs</a>
-                        </li>
-                        <li>
-                            <a href="ideas.html">Afflatus</a>
-                        </li>
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#">笔记</a>
-                            <ul class="sub-menu">
-                                <li><a href="https://github.com/ZacharyChiu/notebook/new/main" target="_blank">新建笔记</a></li>
-								<li><a href="https://github.com/ZacharyChiu/notebook/blob/main/ToDo.md" target="_blank">备忘录</a></li>
-								<li><a href="https://github.com/ZacharyChiu/notebook/edit/main/Temp.md" target="_blank">临时记录</a></li>
-                                <li><a href="https://github.com/ZacharyChiu/notebook/tree/main" target="_blank">我的笔记清单</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children current-menu-item">
-                            <a href="#">About</a>
-                            <ul class="sub-menu">
-                                <li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io" target="_blank">Github主页源码</a></li>
-				<li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io/edit/main/webs.html" target="_blank">编辑本页源码</a></li>
-                                <li><a href="https://codeload.github.com/ZacharyChiu/ZacharyChiu.github.io/zip/main" target="_blank">网页源码下载</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-right-part nav-right-part-desktop">
-                    <ul>
-                        <li><a class="search header-search" href="#" target="_blank"><i class="fa fa-search"></i></a></li>
-                        <li class=""><a class="login-btn" href="#">Login</a></li>
-                        <li><a class="shopping-cart-btn" href="#" target="_blank"><i class="fa fa-shopping-cart"></i><span>2</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- navbar end -->
-
-    <div class="breadcrumb-area" style="background-image:url('assets/img/breadcrumb/1.png')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-inner">
-                        <div class="section-title text-center">
-                            <h1 class="page-title">Webs List</h1>
-                            <ul class="page-list">
-                                <li><a href="index.html">HOME</a></li>
-                                <li id='here'>天堂有屎你不吃，地狱无屎你端碗来?</li>
-                            </ul>
-                        </div>
-						<div class="section-title text-center">
-							<button class="btn btn-black" onclick="cxkssr()">SSR</button>
-							<button class="btn btn-black" onclick="cxkv2()">V2R</button>
-						</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-    <!-- single-blog-Area Start-->
-    <section class="single-blog-area pd-top-80 pd-bottom-80">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="sidebar-area">
-                        <div class="widget widget-tags m-0">
-                            <h5 class="widget-title">快速跳转</h5>
-                            <div class="tagcloud">
-                                <a href="#Media">媒体</a>
-                                <a href="#Proxy">代理</a>
-                                <a href="#mywork">我的创造</a>
-                                <a href="#Tools">工具</a>
-                                <a href="#Pictures">视觉艺术</a>
-                                <a href="#Source">资源</a>
-                                <a href="#IT">IT</a>
-                                <a href="#Electric">电子</a>
-                                <a href="#Learning">学习</a>
-                                <a href="#AI">AI</a>
-                            </div>
-                        </div>
-
-                        <div class="widget widget-archive" id="Pictures">
-                            <h5 class="widget-title">视觉艺术</h5>
-                            <ul class="list">
-                                <li><a href="https://www.huaban.com" target="_blank"><i class="fa fa-caret-right"></i>花瓣网</a></li>
-                                <li><a href="https://www.pinterest.com" target="_blank"><i class="fa fa-caret-right"></i>Pinterest</a></li>
-                                <li><a href="https://www.artstation.com" target="_blank"><i class="fa fa-caret-right"></i>Artstation</a></li>
-                                <li><a href="https://www.pixiv.net" target="_blank"><i class="fa fa-caret-right"></i>Pixiv</a></li>
-                                <li><a href="http://anime.reactor.cc/best" target="_blank" title="俄罗斯二次元图片社区"><i class="fa fa-caret-right"></i>Anime Reactor</a></li>
-                                <li><a href="https://e-hentai.org" target="_blank"><i class="fa fa-caret-right"></i>E-Hentai</a></li>
-                                <li><a href="https://kemono.party/artists" title="patreon等资源爬取" target="_blank"><i class="fa fa-caret-right"></i>Kemono</a></li>
-                                <li><a href="https://rule34.xxx" target="_blank" title="大图资源库"><i class="fa fa-caret-right"></i>Rule34</a></li>
-                                <li><a href="https://konachan.com/" target="_blank" title="大图资源库"><i class="fa fa-caret-right"></i>konachan</a></li>
-                                <li><a href="https://gelbooru.com/" target="_blank" title="大图资源库"><i class="fa fa-caret-right"></i>gelbooru</a></li>
-                                <li><a href="https://yande.re/post" target="_blank" title="大图资源库"><i class="fa fa-caret-right"></i>yande</a></li>
-                                <li><a href="https://line-of-action.com/" target="_blank" title="速写艺术照资源"><i class="fa fa-caret-right"></i>LineOfAction</a></li>
-                                <li><a href="https://www.yuumeiart.com/" target="_blank" title="个人艺术站（画风多彩绚丽）"><i class="fa fa-caret-right"></i>YuumeiArt</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://sketchfab.com/3d-models/cube-c23a21ee541c49d3a1799ef09fe42d9d" target="_blank"><i class="fa fa-caret-right"></i>在线方块模型<span> </span></a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://scrolller.com/" target="_blank" title="摄影艺术图库"><i class="fa fa-caret-right"></i>Scroller</a></li>
-                                <li><a href="https://nsfwpicx.com/" target="_blank" title="台湾同胞建立的图包分享站"><i class="fa fa-caret-right"></i>NSFW Picx</a></li>
-                                <li><a href="https://www.sex.com" target="_blank" title="人体艺术图库"><i class="fa fa-caret-right"></i>Sex</a></li>
-                                <li><a href="https://dydoll.com/collections" target="_blank" title="实体娃娃专售站"><i class="fa fa-caret-right"></i>DyDolls</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://www.copymanga.site/" target="_blank"><i class="fa fa-caret-right"></i>拷贝漫画</a></li>
-                                <li><a href="https://18comic.vip/" target="_blank"><i class="fa fa-caret-right"></i>禁漫天堂</a></li>
-                                <li><a href="http://www.animetox.com/" target="_blank"><i class="fa fa-caret-right"></i>animetox动漫社</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://www.soumeitu.com/" target="_blank" title="壁纸资源"><i class="fa fa-caret-right"></i>搜美图</a></li>
-                                <li><a href="http://www.win4000.com/" target="_blank" title="壁纸资源"><i class="fa fa-caret-right"></i>美桌</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="widget widget-category" id="Electric">
-                            <h5 class="widget-title">电子</h5>
-                            <ul class="list">
-                                <li><a href="https://www.ednchina.com/news/" target="_blank"><i class="fa fa-caret-right"></i>END China</a></li>
-                                <li><a href="https://www.dianyuan.com/" target="_blank"><i class="fa fa-caret-right"></i>电源网</a></li>
-                                <li><a href="http://www.chongdiantou.com/" target="_blank"><i class="fa fa-caret-right"></i>充电头网</a></li>
-                                <li><a href="https://bbs.elecfans.com/" target="_blank"><i class="fa fa-caret-right"></i>电子发烧友</a></li>
-                                <li><a href="http://bbs.eeworld.com.cn/" target="_blank"><i class="fa fa-caret-right"></i>电子工程世界</a></li>
-                                <li><a href="https://www.eefocus.com/" target="_blank"><i class="fa fa-caret-right"></i>与非网</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="widget widget-archive" id="Media">
-                            <h5 class="widget-title">媒体</h5>
-                            <ul class="list">
-                                <li><a href="https://bilibili.com/" target="_blank"><i class="fa fa-caret-right"></i>哔哩哔哩</a></li>
-                                <li><a href="https://9gag.com" target="_blank"><i class="fa fa-caret-right"></i>9GAG</a></li>
-                                <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-caret-right"></i>推特</a></li>
-                                <li><a href="https://weibo.com/" target="_blank"><i class="fa fa-caret-right"></i>微博</a></li>
-                                <li><a href="https://bcy.net/" target="_blank"><i class="fa fa-caret-right"></i>半次元</a></li>
-                                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-caret-right"></i>油管</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://xhamster.com/" target="_blank"><i class="fa fa-caret-right"></i>Xhamster</a></li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                </div>
-				
-				<div class="col-lg-4">
-                    <div class="sidebar-area">
-                        <div class="widget widget-category" id="Learning">
-                            <h5 class="widget-title">学习</h5>
-                            <ul class="list">
-                                <li><a href="https://e-hentai.org/uploader/%E7%8C%AB%E5%87%BA%E6%B2%A1%E6%B3%A8%E6%84%8F" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>猫出没注意<span>艺术类教材PDF</span></a></li>
-                                <li><a href="https://e-hentai.org/uploader/Ottogentle" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>Ottogentle<span>艺术类教材PDF</span></a></li>
-                                <li><a href="https://www.cgzixue.cn/" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>CG自学网<span>643329</span></a></li>
-                                <li><a href="https://app.yinxiang.com/Home.action?login=true" target="_blank"><i class="fa fa-caret-right"></i>印象笔记<span> </span></a></li>
-                            </ul>
-                        </div>
-						
-                        <div class="widget widget-archive" id="IT">
-                            <h5 class="widget-title">IT</h5>
-                            <ul class="list">
-                                <li><a href="https://v2.nonebot.dev/" target="_blank"><i class="fa fa-caret-right"></i>NoneBot官方文档</a></li>
-                                <li><a href="https://github.com/ZacharyChiu?tab=repositories" target="_blank"><i class="fa fa-caret-right"></i>Github</a></li>
-				<li><a href="https://codepen.io/trending" target="_blank" title="在线写代码html，是一个社区，有很多大佬的作品，可白嫖"><i class="fa fa-caret-right"></i>CodePen</a></li>
-                                <li><a href="https://www.code-nav.cn/resources" target="_blank" title="IT资源聚合"><i class="fa fa-caret-right"></i>编程导航</a></li>
-                                <li><a href="https://www.runoob.com/" target="_blank"><i class="fa fa-caret-right"></i>菜鸟教程</a></li>
-                                <li><a href="https://www.w3school.com.cn/" target="_blank" title=""><i class="fa fa-caret-right"></i>W3School教程</a></li>
-				<li><a href="https://stackoverflow.com" target="_blank" title="Bug搜索"><i class="fa fa-caret-right"></i>Stack Overflow</a></li>
-				<li><a href="https://www.csdn.net" target="_blank"><i class="fa fa-caret-right"></i>CSDN</a></li>
-				<li><a href="https://paperswithcode.com/" target="_blank" title="AI算法论文"><i class="fa fa-caret-right"></i>PapersWithCode</a></li>
-				<li><a href="https://leetcode-cn.com" target="_blank" title="编程相关题库"><i class="fa fa-caret-right"></i>力扣题库</a></li>
-			    </ul>
-                        </div>
-						
-						<div class="widget widget-archive" id="Tools">
-                            <h5 class="widget-title">工具</h5>
-                            <ul class="list">
-                                <li><a href="https://yandex.com/images/" target="_blank"><i class="fa fa-caret-right"></i>Yandex</a></li>
-                                <li><a href="https://www.birme.net/" target="_blank"><i class="fa fa-caret-right"></i>图片批量剪裁</a></li>
-                                <li><a href="https://www.gifhome.com/dt/" target="_blank" title="自制动态表情包"><i class="fa fa-caret-right"></i>Gif之家</a></li>
-                                <li><a href="https://mp3cut.net/cn/" target="_blank" title="在线音频处理"><i class="fa fa-caret-right"></i>123Apps</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://convertio.co/zh/" target="_blank"><i class="fa fa-caret-right"></i>万能转换</a></li>
-                                <li><a href="http://magnet2torrent.com/" target="_blank"><i class="fa fa-caret-right"></i>磁力转BT</a></li>
-                                <li><a href="https://www.hotbox.fun/streaming" target="_blank"><i class="fa fa-caret-right"></i>HotBox流媒体下载</a></li>
-                                <li><a href="https://youtube4kdownloader.com/zh64/" target="_blank"><i class="fa fa-caret-right"></i>Toutuber下载</a></li>
-
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://www.bytelang.com/build/python/editor" target="_blank" title="在线代码运行"><i class="fa fa-caret-right"></i>字节社</a></li>
-                                <li><a href="http://www.bejson.com/" target="_blank"><i class="fa fa-caret-right"></i>在线工具</a></li>
-				<li><a href="http://www.wetools.com/sass-to-css" target="_blank"><i class="fa fa-caret-right"></i>在线SASS转CSS</a></li>
-                                <li><a href="http://www.epinv.com/shufa/" target="_blank"><i class="fa fa-caret-right"></i>中文书法字体转换<span> </span></a></li>
-                                <li><a href="http://www.epinv.com/calligraphy/" target="_blank"><i class="fa fa-caret-right"></i>英文书法字体转换<span> </span></a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://telegra.ph/" target="_blank" title="匿名文章发布"><i class="fa fa-caret-right"></i>Telegra</a></li>
-                            </ul>
-                        </div>
-						
-						<div class="widget widget-archive" id="Proxy">
-                            <h5 class="widget-title">代理</h5>
-                            <ul class="list">
-								<li><a href="https://www.youtube.com/watch?v=4FHFxX8tHGw&list=PLpPexpOJZjK8PFjwhCpKpCE9vU2MULT7W&index=9" target="_blank"><i class="fa fa-caret-right"></i>梦歌</li>
-								<li><a href="https://www.youtube.com/@youtube-aweikeji" target="_blank"><i class="fa fa-caret-right"></i>阿伟科技</li>
-								<li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank"><i class="fa fa-caret-right"></i>Clash下载</a></li>
-								<li><a href="https://docs.cfw.lbyczf.com/contents/quickstart.html" target="_blank"><i class="fa fa-caret-right"></i>Clash说明文档</a></li>
-                                <li><a href="https://free.kingfu.cf/" target="_blank"><i class="fa fa-caret-right"></i>景福资源站</li>
-                                <li><a href="https://sspool.herokuapp.com/" target="_blank"><i class="fa fa-caret-right"></i>Peekfun资源站</li>
-                            </ul>
-                        </div>
-						
-						<div class="widget widget-archive" id="mywork">
-                            <h5 class="widget-title">我的创造</h5>
-                            <ul class="list">
-								<li><a href="https://zacharychiu.github.io/timeline/index.html" target="_blank"><i class="fa fa-caret-right"></i>四狗鼎立时间线</li>
-								<li><a href="https://github.com/ZacharyChiu/ZacharyChiu.github.io/edit/main/timeline/index.html" target="_blank"><i class="fa fa-caret-right"></i>编辑四狗时间线</li>
-                            </ul>
-                        </div>
-						
-                    </div>
-                </div>
-				
-                <div class="col-lg-4">
-                    <div class="sidebar-area">
-                        <div class="widget widget-category" id="AI">
-                            <h5 class="widget-title">AI</h5>
-                            <ul class="list">
-				<li><a href="https://chat.openai.com/chat" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>Chat GPT</a></li>
-				<li><a href="https://ainav.sciencat.net/chatgpt" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>ChatGPT工具汇总</a></li>
-                                <li><a href="https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features" target="_blank"><i class="fa fa-caret-right"></i>微软语音合成</a></li>
-				<li><a href="https://yuanshenai.com/" target="_blank"><i class="fa fa-caret-right"></i>原神AI语音合成</a></li>
-				<li><a href="https://magi.com/" target="_blank" target="_blank"><i class="fa fa-caret-right"></i>Magi搜索</a></li>
-				    
-				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-				    
-                                <li><a href="https://vision.aliyun.com/?spm=a2c6h.12908639.1395090.9.614a6886mJmK21" target="_blank"><i class="fa fa-caret-right"></i>达摩院计算机视觉</a></li>
-                                <li><a href="https://homenew.console.aliyun.com/home/scene/Operation" target="_blank"><i class="fa fa-caret-right"></i>阿里云</a></li>
-                                <li><a href="https://console.xfyun.cn/app/myapp" target="_blank"><i class="fa fa-caret-right"></i>讯飞AI开发平台</a></li>
-                                <li><a href="http://www.tuling123.com/member/robot/index.jhtml" target="_blank"><i class="fa fa-caret-right"></i>图灵机器人</a></li>
-                                <li><a href="https://console.bce.baidu.com/?_=1608357898170#/index/overview" target="_blank"><i class="fa fa-caret-right"></i>百度智能云</a></li>
-                                
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://civitai.com/" target="_blank" title="SD模型资源"><i class="fa fa-caret-right"></i>Civit AI</a></li>
-                                <li><a href="http://resource.miaoshouai.com/" target="_blank" title="SD模型资源"><i class="fa fa-caret-right"></i>喵手AI资源站</a></li>
-                                <li><a href="https://cyberes.github.io/stable-diffusion-textual-inversion-models/" target="_blank" title="SD模型资源"><i class="fa fa-caret-right"></i>TI模型分享</a></li>
-                                <li><a href="http://tomxlysplay.com.cn/#/" target="_blank"><i class="fa fa-caret-right"></i>SD元素法典</a></li>
-                                <li><a href="https://colab.research.google.com/drive/1kw3egmSn-KgWsikYvOMjJkVDsPLjEMzl" target="_blank"><i class="fa fa-caret-right"></i>SD的colab笔记</a></li>
-                                <li><a href="https://lexica.art/" target="_blank"><i class="fa fa-caret-right"></i>SD绘画社区</a></li>
-					
-				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://artbreeder.com/shitofape" target="_blank" title="AI人像生成"><i class="fa fa-caret-right"></i>ArtBreeder</a></li>
-                                <li><a href="https://bigjpg.com/" target="_blank"><i class="fa fa-caret-right"></i>AI图片放大</a></li>
-                            </ul>                                               
-                        </div>
-                        <div class="widget widget-archive" id= "Source">
-                            <h5 class="widget-title">资源</h5>
-                            <ul class="list">
-                                <li><a href="https://1jubt.xyz/" target="_blank"><i class="fa fa-caret-right"></i>聚BT</a></li>
-                                <li><a href="https://bbs.jubt.fun/" target="_blank"><i class="fa fa-caret-right"></i>聚BT论坛</a></li>
-                                <li><a href="https://limbopro.com/daohang/index.html#gsc.tab=0" target="_blank"><i class="fa fa-caret-right"></i>毒奶导航</a></li>
-                                <li><a href="http://www.gequdaquan.net/" target="_blank"><i class="fa fa-caret-right"></i>音乐聚合</a></li>
-                                <li><a href="https://www.chongbuluo.com/" target="_blank"><i class="fa fa-caret-right"></i>虫部落<span>搜书搜文献聚合</span></a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://mp.weixin.qq.com/s/cd9077g-QBWfVgFWi8NHEQ" target="_blank"><i class="fa fa-caret-right"></i>共享窝</a></li>
-                                <li><a href="https://cupfox.app/" target="_blank" title="多渠道播放源"><i class="fa fa-caret-right"></i>茶杯狐</a></li>
-                                <li><a href="https://libvio.me/" target="_blank"><i class="fa fa-caret-right"></i>libvio</a></li>
-                                <li><a href="https://www.novipnoad.com/" target="_blank" title="国外影视"><i class="fa fa-caret-right"></i>NO视频</a></li>
-                                <li><a href="https://www.agemys.com" target="_blank"><i class="fa fa-caret-right"></i>AGE动漫</a></li>
-                                <li><a href="https://www.ttbtweb.com/https://ddrk.me/" target="_blank" title="高质量无修资源"><i class="fa fa-caret-right"></i>低端影视<span></span></a></li>
-                                <li><a href="https://www.woniucd.com/" target="_blank"><i class="fa fa-caret-right"></i>蜗牛影视</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="http://www.52pjb.net/" target="_blank"><i class="fa fa-caret-right"></i>吾爱破解吧</a></li>
-                                <li><a href="https://www.ghxi.com/" target="_blank"><i class="fa fa-caret-right"></i>果核剥壳</a></li>
-                                <li><a href="https://sleazyfork.org/zh-CN" target="_blank"><i class="fa fa-caret-right"></i>油猴插件商店</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://blender.kim/" target="_blank"><i class="fa fa-caret-right"></i>Kim Blender</a></li>
-                                <li><a href="https://blenderco.cn/" target="_blank"><i class="fa fa-caret-right"></i>CO Blender</a></li>
-                                <li><a href="https://ambientcg.com/" target="_blank"><i class="fa fa-caret-right"></i>CCO Blender</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="https://www.iconfont.cn/" target="_blank"><i class="fa fa-caret-right"></i>阿里图标</a></li>
-                                <li><a href="https://sc.chinaz.com/tag_moban/html.html" target="_blank" title="html模板免费下载"><i class="fa fa-caret-right"></i>站长素材</a></li>
-                                <li><a href="https://www.html5tricks.com/category/css3-tutorials" target="_blank" title="CSS模板免费下载"><i class="fa fa-caret-right"></i>前端新世界</a></li>
-
-                                <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#fa3150 SIZE=1>
-
-                                <li><a href="http://www.lux6.vip" target="_blank"><i class="fa fa-caret-right"></i>iOS付费游戏</a></li>
-                            </ul>
-                        </div>
-
-						
-						
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- single-blog-Area End-->
-
-    <!-- subscribe-Area Start-->
-    <section class="subscribe-area pd-top-80 pd-bottom-80" style="background: url(assets/img/newsletter/bg.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="subscribe-wrap">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10">
-                                <div class="single-subscribe-wrap">
-                                    <input type="text" placeholder="Enter your mail here">
-                                    <button class="btn btn-black">SUBSCRIBE FOR NEWSLETTER</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- subscribe-Area end-->
-
-    <!-- footer area start -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget widget">
-                        <a class="logo" href="#"><img src="assets/img/logo.png" alt="#"></a>
-                        <p>869, Miyan road, Y4 456 Mona Town.</p>
-                        <p>Office No 3456.</p>
-                        <p>info@example.com</p>
-                        <p class="m-0">+234-58286909</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget widget widget_link">
-                        <h4 class="widget-title">Links.</h4>
-                        <ul>
-                            <li><a href="#">LED light source</a></li>
-                            <li><a href="#">Pendant Lamp</a></li>
-                            <li><a href="#">Floor Lamp</a></li>
-                            <li><a href="#">LED Pendant Lamp</a></li>
-                            <li><a href="#">Table Lamp</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget widget widget_link">
-                        <h4 class="widget-title">About Us.</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">My account</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget widget widget_contact">
-                        <h4 class="widget-title">Contact Us.</h4>
-                        <p>We are availble eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
-                        <ul class="social-area">
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer area end -->
-
-    <!--Footer bottom-->
-    <div class="footer-bottom footer-bottom-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="copyright-area">
-                        <p>Copyright &copy; 2021.Zachary All rights reserved.<a target="_blank" href="https://theporndude.com/">guide</a></p>                        
-                    </div>
-                </div>
-            </div>                
-        </div>
-    </div>
-    <!--Footer bottom-->        
-
-    <!-- back to top area start -->
-    <div class="back-to-top">
-        <span class="back-top" target="_blank"><i class="la la-arrow-up"></i></span>
-    </div>
-    <!-- back to top area end -->
-
-
-    <!-- all plugins here -->
-    <script src="assets/js/vendor.js"></script>
-    <!-- main js  -->
-    <script src="assets/js/main.js"></script>
 	
-	<script src="assets/js/zac.js"></script>
+	<h1>四狗鼎立-时间线</h1>
+<div class="timeline">
+  
+	<h2 class="timeline__item timeline__item--year">1926</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">2月</h3>
+			伊万诺夫带16岁的妮娜和另一个助手，前往西非进行人猿杂交实验
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1932</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">3月</h3>
+			伊万诺夫死亡
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1933</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">1月</h3>
+			希特勒出任德国总理
+		</div>
+
+		<div class="timeline__item">
+			<h3 class="timeline__title">10月</h3>
+			EEU成立
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1945</h2>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+			<li>德国战败，苏联秘密回收[生命之源计划]部分婴儿</li>
+			<li>神蜕计划立项</li>
+			</ul>
+		</div>
+				
+		
+	<h2 class="timeline__item timeline__item--year">1949</h2>
 	
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			4岁的Golden成为神蜕计划首个成功案例
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">8月</h3>
+			苏联第一颗真正意义原子弹爆炸，代号“铁克瓦”
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1950</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			50犬系开始培育
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1959</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			18岁弗朗西斯进入EEU执行部，成为史上最年轻的执行者
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1969</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			50犬系陆续投放至欧洲
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1971</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			神蜕计划研究组通过一种记录算法，首次记录下一只白鼠的完整大脑结构信息。
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1974</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			神蜕计划研究组实现大脑物理结构复刻技术。
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1975</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>16岁的索菲亚进入EEU执行部，刷新弗朗西斯记录，并被分配到弗朗西斯手下。</li>
+				<li>70犬系开始培育。</li>
+				<li>尼娜的克隆胚胎开始培育。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1976</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>意大利杰摩那发生大地震</li>
+				<li>
+			50犬系红色之夜</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1991</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>苏联解体</li>
+				<li>犬社迁部太平洋孤岛</li>
+			</ul>
+			
+		</div>
+				
+		
+	<h2 class="timeline__item timeline__item--year">1994</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">1月</h3>
+			84岁的尼娜通过大脑复刻，成功更换生理年龄16岁的新身体。
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">4月</h3>
+			16岁的卡林来到CC，成立只有他一个成员的基础科学研究部
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">9月</h3>
+			尼娜与卡林同居，尝试将维度投射理论应用到生化领域。
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">1995</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">7月</h3>
+			90犬系开始培育
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2005</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>俄罗斯历史文档泄露，披露伊万诺夫受到威胁才进行人猿杂交实验</li>
+				<li>赤那来到维宁暮，主导维宁暮海下堡垒的建造。CC成立工程部。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2006</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			尼娜（28岁）进入冬眠状态
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2008</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			酒井仁美认识初恋，发生蜕变。
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2009</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			洪淼淼到哥本哈根留学
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2014</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>洪淼淼接触EEU并加入执行部。</li>
+				<li>酒井仁美在英国加入EEU执行部。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2015</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">1月</h3>
+			李允珠在荷兰加入EEU执行部
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">8月</h3>
+			<ul>
+				<li>四狗沪城旅游</li>
+				<li>沪城巷战，萨摩耶9612被捕</li>
+				<li>索菲亚盯上四狗，四狗在暗网被扣上不存在的离谱信息</li>
+			</ul>
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">9月</h3>
+			<ul>
+				<li>萨摩耶被押送至蜀川省山区</li>
+				<li>希尔加入CC</li>
+			</ul>
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">12月</h3>
+			<ul>
+				<li>怀特为调查萨摩耶9612失联事件前往中国大陆，赤那时隔十年，重回家乡。</li>
+				<li>国内帮派危机，大陆洪门面临取缔风险</li>
+				<li>洪淼淼因私人原因申请长假，停止执行任务常驻中国</li>
+			</ul>
+		</div>
+	
+	
+	<h2 class="timeline__item timeline__item--year">2017</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			静安府成立
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2018</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">1月</h3>
+			中国政府展开扫黑除恶行动
+		</div>
+		
+		<div class="timeline__item">
+		<h3 class="timeline__title">3月</h3>
+			<ul>
+				<li>两会中，政府默许静安府的存在</li>
+				<li>EEU探行者追查个体金钗、何诗琪的真实身份</li>
+				<li>圣纹细胞抑制剂研发初获成果。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2019</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title"></h3>
+			<ul>
+				<li>金钗的实验体身份被确认，EEU西装意图抓捕</li>
+				<li>索菲亚在平京透露风声，将事件升级。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2020</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">6月</h3>
+			上官博雅携抑制剂与东亚分部执行者于齐州汇合
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">8月</h3>
+			<ul>
+				<li>计亭野战</li>
+				<li>乾伟帮助受伤的上官博雅疗养</li>
+				<li>翟秋宇深山遇到何诗琪，获得eGrid</li>
+			</ul>
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">9月</h3>
+			<ul>
+				<li>李思佳从锦城前往荆邑调查翟秋宇</li>
+				<li>翟秋宇与孙雨瞳相遇，种下天工科技的种子</li>
+			</ul>
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">10月</h3>
+			<ul>
+				<li>上官博雅接上级指示，寻求洪淼淼帮助，潜伏与调查，索菲亚介入，安排扶植乾伟</li>
+				<li>翟秋宇搬入集装箱房，研发保命手段</li>
+				<li>江悦在朋友做口罩的公司那里挂名法人。</li>
+			</ul>
+		</div>
+			
+		<div class="timeline__item">
+			<h3 class="timeline__title">11月</h3>
+			乾伟与上官博雅前往暨阳，上官博雅与洪淼淼会面
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">2021</h2>
+		<div class="timeline__item">
+			<h3 class="timeline__title">4月</h3>
+			翟秋宇闯关维宁暮，加入CC
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">9月</h3>
+			<ul>
+				<li>许渊尝试考公务员</li>
+				<li>孙雨瞳在啊哩吗吗大学生创业基金会支持下创立天工科技工作室</li>
+			</ul>
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">10月</h3>
+			<ul>
+				<li>许渊通过公务员考试，路费报销且预支，果断前往平京。</li>
+				<li>天工科技开发出“小丽助手”，以“知识管理大师”为卖点，上线各大平台应用商城。</li>
+				<li>江悦朋友公司面临倒闭，欠款300万，朋友携余款跑路蒸发，法人江悦陷入窘境。</li>
+				<li>许渊被安排到静安府“面试”，受控于洪焕磊，又被唐若烟牵着鼻子走。</li>
+			</ul>
+		</div>
+
+		<div class="timeline__item">
+		<h3 class="timeline__title">11月</h3>
+			<ul>
+				<li>孙雨瞳亲自游说，一轮融资获得两亿资金，天工科技工作室注册为正式公司。</li>
+				<li>江悦接管朋友公司，安抚50多位工人，卖设备得20万，远远不够补债。花7万买3台装箱模切机，转行做包装纸箱。利用此前所有人脉分摊销路。</li>
+				<li>许渊在洪焕磊监控下进行体能特训。抱唐若烟大腿，扮怂，当跟班，暗中学习唐老奶的行事风格。</li>
+			</ul>
+		</div>
+		
+		<div class="timeline__item">
+		<h3 class="timeline__title">12月</h3>
+			<ul>
+				<li>面向企业的“小丽助手”发布。天工科技开始盈利。</li>
+				<li>江悦天南海北谈业务，趁机结识各行各业客户。第一月6万成本消耗，倒贴2万发工人人均1500生活费（年节工资）。</li>
+			</ul>
+		</div>
+	
+	
+	<h2 class="timeline__item timeline__item--year">2022</h2>
+		<div class="timeline__item">
+		<h3 class="timeline__title">1月</h3>
+		江悦纸箱日产12万，月销19万，月入9.5万，月利润5千。
+		</div>
+
+		<div class="timeline__item">
+			<h3 class="timeline__title">4月</h3>
+			<ul>
+				<li>姬体v1.0开发完成</li>
+				<li>乾伟创办味恋餐厅，首家店开在</li>
+			</ul>
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">6月</h3>
+			天工科技多家客户入股，天工科技可动资金流指数级上升，公司成员破百。
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">8月</h3>
+			翟秋宇提出离开CC申请。
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">9月</h3>
+			<ul>
+				<li>里奇使计阻碍翟秋宇离开。</li>
+				<li>翟秋宇签订CC保密协议。</li>
+			</ul>
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">10月</h3>
+			<ul>
+				<li>CC对翟秋宇执行自保考核。金毛窜入，大闹考场，翟秋宇无压力应对金毛平A。考场报废。</li>
+				<li>翟秋宇回到大陆。</li>
+			</ul>
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">11月</h3>
+			翟秋宇失业，去上海找工作。遇孙雨瞳，进入天工科技。天工科技技术大爆炸。
+		</div>
+		
+		<div class="timeline__item">
+			<h3 class="timeline__title">12月</h3>
+			<ul>
+				<li>天工科技核心强人工智能“丽娜”问世。</li>
+				<li>江悦创办悦威工业，主打代工。</li>
+			</ul>
+		</div>
+		
+		
+	<h2 class="timeline__item timeline__item--year">...</h2>
+  
+</div>
 </body>
 </html>
