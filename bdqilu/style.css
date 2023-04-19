@@ -1,0 +1,168 @@
+/* 定义全局变量，卡片高度为300px，卡片宽度为卡片高度除以1.5 */
+:root {
+  --card-height: 400px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+/*
+设置所有元素的盒模型为border-box 
+将外边距这些玩意儿也算入元素的尺寸中
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* 全屏显示 */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  margin: 0;  /* 外边距0 */
+  display: flex;  /* 弹性布局 */
+  /* 居中显示 */
+  justify-content: center;
+  align-items: center;
+  background: #191c29;
+}
+
+.mainbox{
+  /* 弹性布局，使得图片自动换行 */
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+.titleflex{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1{
+	margin: 50px;
+	color: #fff;
+}
+
+.card {
+  /* 使用全局变量作为宽高 */
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;  /* 左右居中 */
+  align-items: flex-end;  /* 底部对齐 */
+  padding: 0 36px;  /* 内边距上下0，左右36px */
+  perspective: 2500px;  /* 设置透视，距离老子2500像素，这需要设置了transform属性才会有立体效果 */
+  margin: 50px 50px;  /* 外边距50px */
+}
+
+/* 卡片的默认图片（预览图） */
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 自适应填充，保持图片原有比例，图片过大时会剪裁一部分 */
+}
+
+.wrapper {
+  transition: all 0.5s;  /* 动画过渡0.5秒 */
+  position: absolute;
+  width: 100%;
+  /*
+  z-index属性用于指定元素堆叠顺序，数字代表图层位置，越大越上
+  -1表示放在正常堆叠下面，会被其他元素遮挡，通常用于特效，渐变之类的
+  */
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  /* 
+  perspective(900px)：设置透视距离为 900 像素。这个值越大，元素看起来离我们越远，显示的 3D 效果也就越明显。
+  translateY(-5%)：将元素沿着 y 轴向上移动 5% 的高度。负数表示向上移动，正数表示向下移动。这个值可以根据实际情况进行调整。
+  rotateX(45deg)：将元素绕 x 轴顺时针旋转 45 度。这样做会使元素在垂直方向上产生倾斜效果。
+  translateZ(0)：将元素沿 z 轴方向移动 0 像素。虽然这里的值是 0，但是由于之前设置了透视距离，元素仍然会呈现出立体效果。
+  */
+  transform: perspective(900px) translateY(-5%) rotateX(45deg) translateZ(0);
+  /*
+  2px：阴影的水平偏移量为 2 像素。正值表示向右偏移，负值表示向左偏移。
+  35px：阴影的垂直偏移量为 35 像素。正值表示向下偏移，负值表示向上偏移。
+  32px：阴影的模糊半径为 32 像素。这个值越大，阴影就会越模糊、越扩散。
+  -8px：阴影的尺寸为 8 像素，即阴影超出边框的距离为 8 像素。负值表示阴影内部（即与元素重叠的区域）也显示阴影效果。
+  rgba(0, 0, 0, 0.75)：阴影的颜色为黑色，透明度为 0.75。可以使用 rgba() 函数来指定阴影的颜色及透明度。
+  效果：一种具有深度感的阴影效果，使其看起来浮在页面上方，增强了视觉层次感。
+  */
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  /* 下面这两行玩意儿是为了兼容远古垃圾浏览器 */
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+/*
+.wrapper::before 和 .wrapper::after 是CSS中的伪元素 (pseudo-element)，
+用于在元素的前面和后面添加额外的内容，而无需修改HTML代码。
+这两个伪元素分别对应于元素的起始位置和结束位置，通过设置 content 属性来添加内容，
+并使用 position、display、z-index 等属性来控制它们的位置和样式。
+在代码中，.wrapper::before 和 .wrapper::after 表示在该元素的前面和后面添加额外的内容。
+*/
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+	/* linear-gradient 线性渐变 */
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+/* 鼠标经过card时，把wrapper的两个伪类变成可见状态 */
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;  
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+/* 鼠标讲过card时让title向上50px，向屏幕外弹出100像素 */
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;  /* character会被title遮挡 */
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
