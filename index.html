@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexxagon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="main-menu" class="screen">
+            <h1>HEXXAGON</h1>
+            <p class="subtitle">策略棋盘游戏</p>
+            <div class="menu-buttons">
+                <button class="menu-btn" data-mode="puzzle">解谜模式</button>
+                <button class="menu-btn" data-mode="custom">自定义地图</button>
+                <button class="menu-btn" data-mode="pvp">PVP 模式</button>
+            </div>
+            <div class="instructions">
+                <h3>游戏规则</h3>
+                <p>每轮选择复制到相邻格子，或跳跃到距离为二的格子</p>
+                <p>跳跃后周围对手棋子会变成你的</p>
+                <p>结束时拥有更多棋子的玩家获胜</p>
+            </div>
+        </div>
+        <div id="mode-screen" class="screen hidden">
+            <button class="back-btn" id="back-to-menu">← 返回</button>
+            <h2 id="mode-title">选择关卡</h2>
+            <div id="level-list" class="level-list"></div>
+        </div>
+        <div id="game-screen" class="screen hidden">
+            <div class="game-header">
+                <button class="back-btn" id="back-to-mode">← 返回</button>
+                <div class="score-display">
+                    <div class="player-score" id="player1-score">
+                        <span class="player-color player1"></span>
+                        <span class="player-name">玩家1</span>
+                        <span class="score">3</span>
+                    </div>
+                    <div class="player-score" id="player2-score">
+                        <span class="player-color player2"></span>
+                        <span class="player-name">玩家2</span>
+                        <span class="score">3</span>
+                    </div>
+                    <div class="player-score hidden" id="player3-score">
+                        <span class="player-color player3"></span>
+                        <span class="player-name">玩家3</span>
+                        <span class="score">3</span>
+                    </div>
+                </div>
+                <div class="turn-indicator" id="turn-indicator">玩家1 的回合</div>
+            </div>
+            <div class="game-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+            <div class="game-footer">
+                <div class="game-info" id="game-info"></div>
+                <button class="restart-btn" id="restart-btn">重新开始</button>
+            </div>
+        </div>
+        <div id="game-over" class="screen hidden">
+            <h2>游戏结束</h2>
+            <div id="final-scores"></div>
+            <h3 id="winner-text"></h3>
+            <div id="level-stars-award" class="level-stars-award"></div>
+            <div class="game-over-buttons">
+                <button class="menu-btn" id="play-again">再玩一次</button>
+                <button class="menu-btn hidden" id="next-level">下一关</button>
+                <button class="menu-btn" id="back-to-menu-end">返回主菜单</button>
+            </div>
+        </div>
+        <div id="custom-map-screen" class="screen hidden">
+            <button class="back-btn" id="back-to-menu-custom">← 返回</button>
+            <h2>自定义地图编辑器</h2>
+            <div class="custom-map-info">
+                <p>💾 地图文件保存位置: 保存时会自动下载JSON文件,请将其保存到项目根目录的 <code>custom-maps/</code> 文件夹中(需要手动创建此文件夹)</p>
+            </div>
+            <div class="custom-map-controls">
+                <div class="control-group">
+                    <label>地图名称:</label>
+                    <input type="text" id="map-name" placeholder="输入地图名称" value="我的地图">
+                </div>
+                <div class="control-group">
+                    <label>地图半径:</label>
+                    <select id="map-radius">
+                        <option value="3">小 (半径3)</option>
+                        <option value="4" selected>中 (半径4)</option>
+                        <option value="5">大 (半径5)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>地图类型:</label>
+                    <select id="map-type">
+                        <option value="classic">经典圆形</option>
+                        <option value="ring">环形</option>
+                        <option value="center">中心争夺</option>
+                        <option value="triangle">三角形</option>
+                        <option value="islands">孤岛</option>
+                        <option value="corridor">走廊</option>
+                        <option value="star">星形</option>
+                        <option value="maze">迷宫</option>
+                        <option value="fortress">堡垒</option>
+                        <option value="abyss">深渊</option>
+                        <option value="storm">风暴</option>
+                        <option value="ultimate">终极</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>编辑模式:</label>
+                    <select id="edit-mode">
+                        <option value="remove">移除格子</option>
+                        <option value="add">添加格子</option>
+                        <option value="player1">设置玩家1棋子</option>
+                        <option value="player2">设置玩家2棋子</option>
+                    </select>
+                </div>
+                <div class="control-buttons">
+                    <button class="control-btn" id="generate-map">生成地图</button>
+                    <button class="control-btn" id="clear-all">清空所有</button>
+                    <button class="control-btn" id="save-map">保存地图</button>
+                    <button class="control-btn" id="import-map">导入地图</button>
+                    <button class="control-btn" id="load-saved-maps">已保存的地图</button>
+                    <input type="file" id="map-file-input" accept=".json" style="display: none;">
+                </div>
+            </div>
+            <div class="custom-map-preview">
+                <canvas id="custom-map-canvas"></canvas>
+            </div>
+            <div id="saved-maps-list" class="saved-maps-list"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>
