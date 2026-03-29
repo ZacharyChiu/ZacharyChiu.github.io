@@ -28,8 +28,72 @@ class Hexxagon {
             3: '#ffe66d'  // 玩家3 - 黄色
         };
 
+        // 皮肤配置
+        this.skinEnabled = false;
+        this.skinImages = {}; // 存储皮肤图片
+        this.skinScales = {}; // 存储皮肤缩放比例
+        this.skinConfig = null;
+
         this.canvas.addEventListener('click', (e) => this.handleClick(e));
         this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+    }
+
+    // 加载皮肤配置
+    async loadSkins() {
+        try {
+            const response = await fetch('skin/skin-config.json');
+            if (response.ok) {
+                this.skinConfig = await response.json();
+                this.skinEnabled = this.skinConfig.enabled;
+
+                if (this.skinEnabled && this.skinConfig.skins) {
+                    console.log('开始加载皮肤...');
+
+                    // 加载玩家1皮肤
+                    const player1Skin = this.skinConfig.skins.player1;
+                    if (player1Skin && player1Skin.file) {
+                        await this.loadSkinImage(1, player1Skin.file, player1Skin.scale);
+                    }
+
+                    // 加载玩家2皮肤
+                    const player2Skin = this.skinConfig.skins.player2;
+                    if (player2Skin && player2Skin.file) {
+                        await this.loadSkinImage(2, player2Skin.file, player2Skin.scale);
+                    }
+
+                    // 加载玩家3皮肤
+                    const player3Skin = this.skinConfig.skins.player3;
+                    if (player3Skin && player3Skin.file) {
+                        await this.loadSkinImage(3, player3Skin.file, player3Skin.scale);
+                    }
+
+                    console.log('皮肤加载完成');
+                }
+            }
+        } catch (err) {
+            console.warn('加载皮肤配置失败:', err);
+            this.skinEnabled = false;
+        }
+    }
+
+    // 加载单个皮肤图片
+    loadSkinImage(player, fileName, scale) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = `skin/${fileName}`;
+
+            img.onload = () => {
+                this.skinImages[player] = img;
+                this.skinScales[player] = scale;
+                console.log(`玩家${player}皮肤加载成功: ${fileName}`);
+                resolve();
+            };
+
+            img.onerror = () => {
+                console.warn(`玩家${player}皮肤加载失败: ${fileName}`);
+                reject();
+            };
+        });
     }
 
     // 初始化棋盘
@@ -296,19 +360,50 @@ class Hexxagon {
     // 绘制棋子
     drawPiece(x, y, player) {
         const pieceSize = this.hexSize * 0.6;
-        const gradient = this.ctx.createRadialGradient(x - pieceSize/3, y - pieceSize/3, 0, x, y, pieceSize);
-        
-        gradient.addColorStop(0, '#fff');
-        gradient.addColorStop(0.3, this.cellColors[player]);
-        gradient.addColorStop(1, this.darkenColor(this.cellColors[player], 20));
 
-        this.ctx.beginPath();
-        this.ctx.arc(x, y, pieceSize, 0, Math.PI * 2);
-        this.ctx.fillStyle = gradient;
-        this.ctx.fill();
-        this.ctx.strokeStyle = '#333';
-        this.ctx.lineWidth = 2;
-        this.ctx.stroke();
+        // 检查是否有皮肤图片
+        if (this.skinEnabled && this.skinImages[player]) {
+            const img = this.skinImages[player];
+            const scale = this.skinScales[player] || 0.7;
+
+            // 裁剪为圆形区域
+            this.ctx.save();
+            this.ctx.beginPath();
+            this.ctx.arc(x, y, pieceSize, 0, Math.PI * 2);
+            this.ctx.clip();
+
+            // 绘制皮肤图片，填满整个棋子圆
+            this.ctx.drawImage(
+                img,
+                x - pieceSize,
+                y - pieceSize,
+                pieceSize * 2,
+                pieceSize * 2
+            );
+            this.ctx.restore();
+
+            // 添加边框
+            this.ctx.beginPath();
+            this.ctx.arc(x, y, pieceSize, 0, Math.PI * 2);
+            this.ctx.strokeStyle = '#333';
+            this.ctx.lineWidth = 2;
+            this.ctx.stroke();
+        } else {
+            // 使用默认的渐变绘制
+            const gradient = this.ctx.createRadialGradient(x - pieceSize/3, y - pieceSize/3, 0, x, y, pieceSize);
+
+            gradient.addColorStop(0, '#fff');
+            gradient.addColorStop(0.3, this.cellColors[player]);
+            gradient.addColorStop(1, this.darkenColor(this.cellColors[player], 20));
+
+            this.ctx.beginPath();
+            this.ctx.arc(x, y, pieceSize, 0, Math.PI * 2);
+            this.ctx.fillStyle = gradient;
+            this.ctx.fill();
+            this.ctx.strokeStyle = '#333';
+            this.ctx.lineWidth = 2;
+            this.ctx.stroke();
+        }
     }
 
     // 绘制六边形路径
@@ -775,30 +870,21 @@ class Hexxagon {
     }
 
     // 生成关卡
-    generateLevels() {
-        // 保存现有的自定义地图
-        const customLevels = this.levels ? this.levels.filter(l => l.isCustom) : [];
+    async generateLevels() {
+        console.log('=== 开始生成关卡 ===');
 
-        const levels = [
-            { id: 1, name: '入门', difficulty: 1, mapType: 'classic', radius: 3, unlocked: true, completed: false, stars: 0 },
-            { id: 2, name: '环形', difficulty: 1, mapType: 'ring', radius: 3, unlocked: true, completed: false, stars: 0 },
-            { id: 3, name: '中心争夺', difficulty: 1, mapType: 'center', radius: 3, unlocked: true, completed: false, stars: 0 },
-            { id: 4, name: '三路交锋', difficulty: 2, mapType: 'triangle', radius: 3, unlocked: true, completed: false, stars: 0 },
-            { id: 5, name: '孤岛', difficulty: 2, mapType: 'islands', radius: 3, unlocked: false, completed: false, stars: 0 },
-            { id: 6, name: '走廊', difficulty: 2, mapType: 'corridor', radius: 3, unlocked: false, completed: false, stars: 0 },
-            { id: 7, name: '星形', difficulty: 3, mapType: 'star', radius: 4, unlocked: false, completed: false, stars: 0 },
-            { id: 8, name: '迷宫', difficulty: 3, mapType: 'maze', radius: 4, unlocked: false, completed: false, stars: 0 },
-            { id: 9, name: '堡垒', difficulty: 3, mapType: 'fortress', radius: 4, unlocked: false, completed: false, stars: 0 },
-            { id: 10, name: '深渊', difficulty: 3, mapType: 'abyss', radius: 4, unlocked: false, completed: false, stars: 0 },
-            { id: 11, name: '风暴', difficulty: 3, mapType: 'storm', radius: 4, unlocked: false, completed: false, stars: 0 },
-            { id: 12, name: '终极', difficulty: 3, mapType: 'ultimate', radius: 4, unlocked: false, completed: false, stars: 0 }
-        ];
+        // 清空所有关卡,不加载预置关卡
+        this.levels = [];
 
-        // 合并预置关卡和自定义地图
-        this.levels = [...levels, ...customLevels];
+        // 每次都从custom-maps文件夹加载地图
+        await this.loadCustomMapsFromFiles();
 
         // 从localStorage加载自定义地图
         this.loadCustomMapsFromStorage();
+
+        console.log('=== 关卡生成完成,总数:', this.levels.length, '===');
+        console.log('文件地图数:', this.levels.filter(l => l.source === 'file').length);
+        console.log('本地地图数:', this.levels.filter(l => l.source === 'storage').length);
     }
 
     // 从localStorage加载自定义地图
@@ -820,7 +906,8 @@ class Hexxagon {
                         unlocked: true,
                         completed: false,
                         stars: 0,
-                        isCustom: true
+                        isCustom: true,
+                        source: 'storage'
                     });
                 }
             });
@@ -828,6 +915,117 @@ class Hexxagon {
             console.log('加载后总关卡数:', this.levels.length, '自定义地图数:', this.levels.filter(l => l.isCustom).length);
         } catch (err) {
             console.error('加载自定义地图失败:', err);
+        }
+    }
+
+    // 从custom-maps文件夹加载地图
+    async loadCustomMapsFromFiles() {
+        console.log('=== 开始从custom-maps文件夹加载地图 ===');
+
+        try {
+            // 尝试获取目录下的所有JSON文件
+            try {
+                const response = await fetch('custom-maps/');
+                if (response.ok) {
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const html = parser.parseFromString(text, 'text/html');
+                    const links = html.querySelectorAll('a');
+                    const jsonFiles = Array.from(links)
+                        .map(a => a.href)
+                        .filter(href => href.endsWith('.json'))
+                        .map(href => href.split('/').pop());
+
+                    console.log('发现JSON文件:', jsonFiles);
+
+                    for (const fileName of jsonFiles) {
+                        await this.loadMapFile(fileName);
+                    }
+                }
+            } catch (err) {
+                console.warn('⚠️ 无法获取文件列表,使用预设文件列表');
+                // 如果无法获取文件列表,使用预设列表
+                const mapFiles = [
+                    'Copy01.json',
+                    'Copy02.json',
+                    'Copy03.json',
+                    'Copy04.json',
+                    'Copy05.json',
+                    'Copy06.json',
+                    'Copy07.json',
+                    'Copy08.json',
+                    'Copy09.json',
+                    'Copy10.json',
+                    'example_map.json',
+                    'Zac01.json'
+                ];
+
+                for (const fileName of mapFiles) {
+                    await this.loadMapFile(fileName);
+                }
+            }
+
+            console.log('✅ custom-maps文件夹地图加载完成');
+        } catch (err) {
+            console.error('❌ 从custom-maps文件夹加载地图失败:', err);
+        }
+    }
+
+    // 加载单个地图文件
+    async loadMapFile(fileName) {
+        try {
+            const response = await fetch(`custom-maps/${fileName}`);
+            if (response.ok) {
+                const mapData = await response.json();
+
+                console.log(`正在处理文件: ${fileName}`);
+
+                // 为每个文件生成唯一ID,基于文件名
+                const baseId = 'file_' + fileName.replace('.json', '');
+
+                // 检查是否已存在相同ID的地图
+                const existingIndex = this.levels.findIndex(l => l.id === baseId);
+
+                if (existingIndex === -1) {
+                    // 新地图,添加到关卡列表
+                    this.levels.push({
+                        id: baseId,
+                        name: mapData.name || fileName.replace('.json', ''),
+                        difficulty: 1,
+                        mapType: 'custom',
+                        radius: mapData.radius || 4,
+                        customBoard: mapData.board,
+                        unlocked: true,
+                        completed: false,
+                        stars: 0,
+                        isCustom: true,
+                        source: 'file',
+                        fileName: fileName
+                    });
+                    console.log('✅ 新增地图:', mapData.name || fileName);
+                } else {
+                    // 地图已存在,更新数据
+                    this.levels[existingIndex] = {
+                        id: baseId,
+                        name: mapData.name || fileName.replace('.json', ''),
+                        difficulty: 1,
+                        mapType: 'custom',
+                        radius: mapData.radius || 4,
+                        customBoard: mapData.board,
+                        unlocked: this.levels[existingIndex].unlocked,
+                        completed: this.levels[existingIndex].completed,
+                        stars: this.levels[existingIndex].stars,
+                        isCustom: true,
+                        source: 'file',
+                        fileName: fileName
+                    };
+                    console.log('🔄 更新地图:', mapData.name || fileName);
+                }
+            } else {
+                console.warn(`⚠️ 无法加载文件: ${fileName} (${response.status})`);
+            }
+        } catch (err) {
+            console.warn(`⚠️ 加载地图 ${fileName} 失败:`, err.message);
         }
     }
 
@@ -908,7 +1106,7 @@ class Hexxagon {
     }
 
     // 加载关卡
-    loadLevel(levelId) {
+    async loadLevel(levelId) {
         console.log('=== 开始加载关卡 ===');
         console.log('levelId:', levelId, '类型:', typeof levelId);
 
@@ -945,7 +1143,8 @@ class Hexxagon {
             name: level.name,
             isCustom: level.isCustom,
             hasCustomBoard: !!level.customBoard,
-            unlocked: level.unlocked
+            unlocked: level.unlocked,
+            source: level.source
         });
 
         if (!level.unlocked) {
@@ -955,7 +1154,7 @@ class Hexxagon {
 
         this.currentLevel = levelId;
 
-        // 如果是自定义地图，直接加载保存的棋盘
+        // 如果是自定义地图,直接加载保存的棋盘
         if (level.isCustom && level.customBoard) {
             console.log('✅ 加载自定义地图:', level.name);
             console.log('棋盘数据:', JSON.stringify(level.customBoard).substring(0, 200) + '...');
@@ -1143,6 +1342,9 @@ class GameController {
             }
         });
 
+        // 加载皮肤
+        this.game.loadSkins();
+
         // 生成关卡数据
         this.game.generateLevels();
     }
@@ -1214,27 +1416,33 @@ class GameController {
                 starsHtml += `<span class="star ${i < level.stars ? '' : 'empty'}">★</span>`;
             }
 
+            // 生成预览缩略图
+            const previewHtml = this.generateLevelPreview(level);
+
+            // 不显示删除按钮
             let deleteBtnHtml = '';
-            if (level.isCustom) {
-                deleteBtnHtml = `<button class="delete-level-btn" data-id="${level.id}">✕</button>`;
-            }
 
             item.innerHTML = `
                 <div class="level-content">
-                    <h3>${level.name} ${level.isCustom ? '<span class="custom-badge">自定义</span>' : ''}</h3>
+                    ${previewHtml}
+                    <h3>${level.name}</h3>
                     <div class="level-stars">${starsHtml}</div>
                 </div>
                 ${deleteBtnHtml}
             `;
 
             if (level.unlocked) {
-                item.querySelector('.level-content').addEventListener('click', () => {
+                item.querySelector('.level-content').addEventListener('click', async () => {
                     console.log('点击关卡:', level.id, level.name, '索引:', index);
                     // 优先使用 id,如果 id 不存在则使用索引+1
                     const levelId = level.id || (index + 1);
                     console.log('使用的 levelId:', levelId);
-                    if (this.game.loadLevel(levelId)) {
+                    const loadResult = await this.game.loadLevel(levelId);
+                    console.log('loadLevel 返回结果:', loadResult);
+                    if (loadResult) {
                         this.showGameScreen();
+                    } else {
+                        console.error('❌ 关卡加载失败，无法进入游戏');
                     }
                 });
             }
@@ -1268,6 +1476,10 @@ class GameController {
     showGameScreen() {
         document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
         document.getElementById('game-screen').classList.remove('hidden');
+
+        // 重新调整画布大小并绘制棋盘
+        this.game.resizeCanvas();
+        this.game.draw();
 
         // 显示或隐藏玩家3
         const player3Score = document.getElementById('player3-score');
@@ -1328,9 +1540,10 @@ class GameController {
         });
 
         document.getElementById('map-file-input').addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                this.importMapFromFile(file);
+            const files = Array.from(e.target.files);
+            if (files.length > 0) {
+                console.log('选择了', files.length, '个文件');
+                this.importMapsFromFiles(files);
             }
             e.target.value = ''; // 重置文件输入
         });
@@ -1685,34 +1898,128 @@ class GameController {
         });
     }
 
-    // 导入地图文件
-    importMapFromFile(file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
+    // 批量导入地图文件
+    async importMapsFromFiles(files) {
+        console.log('=== 开始批量导入地图 ===');
+        console.log('文件数量:', files.length);
+        console.log('文件列表:', files.map(f => f.name));
+
+        let successCount = 0;
+        let failCount = 0;
+        const importedMaps = [];
+        const errors = [];
+
+        // 获取当前localStorage中的地图
+        const savedMaps = JSON.parse(localStorage.getItem('hexxagonCustomMaps') || '{}');
+        console.log('当前localStorage中地图数:', Object.keys(savedMaps).length);
+
+        // 处理所有文件
+        for (const file of files) {
             try {
-                const mapData = JSON.parse(e.target.result);
+                console.log('正在处理文件:', file.name);
+                const mapData = await this.readFileAsJSON(file);
+
+                console.log('文件内容检查:');
+                console.log('- name:', mapData.name);
+                console.log('- radius:', mapData.radius);
+                console.log('- board exists:', !!mapData.board);
+
                 if (mapData.name && mapData.radius && mapData.board) {
-                    mapData.id = 'custom_' + Date.now();
-                    mapData.isCustom = true;
+                    // 生成唯一ID
+                    const uniqueId = 'custom_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                    console.log('生成ID:', uniqueId);
 
-                    // 保存到localStorage
-                    const savedMaps = JSON.parse(localStorage.getItem('hexxagonCustomMaps') || '{}');
-                    savedMaps[mapData.id] = mapData;
-                    localStorage.setItem('hexxagonCustomMaps', JSON.stringify(savedMaps));
+                    // 创建新地图对象,不影响原对象
+                    const newMap = {
+                        id: uniqueId,
+                        name: mapData.name,
+                        radius: mapData.radius,
+                        board: mapData.board,
+                        isCustom: true,
+                        createdAt: new Date().toISOString(),
+                        source: 'storage'
+                    };
 
-                    // 添加到关卡列表
-                    this.addCustomMapToLevels(mapData);
+                    // 保存到内存中
+                    savedMaps[uniqueId] = newMap;
+                    importedMaps.push(newMap);
 
-                    alert(`地图 "${mapData.name}" 导入成功! 并已添加到解谜模式关卡列表中。`);
-                    this.showSavedMaps();
+                    successCount++;
+                    console.log(`✅ 成功导入: ${mapData.name}`);
                 } else {
-                    alert('无效的地图文件格式!');
+                    console.warn(`⚠️ 文件格式无效: ${file.name}`);
+                    console.warn('缺少字段:', {
+                        name: !!mapData.name,
+                        radius: !!mapData.radius,
+                        board: !!mapData.board
+                    });
+                    errors.push(`${file.name}: 无效的地图文件格式`);
+                    failCount++;
                 }
             } catch (err) {
-                alert('导入失败: ' + err.message);
+                console.error(`❌ 处理失败: ${file.name}`, err);
+                console.error('错误详情:', err.message, err.stack);
+                errors.push(`${file.name}: ${err.message}`);
+                failCount++;
             }
-        };
-        reader.readAsText(file);
+        }
+
+        // 一次性保存所有地图到localStorage
+        if (successCount > 0) {
+            try {
+                localStorage.setItem('hexxagonCustomMaps', JSON.stringify(savedMaps));
+                console.log(`✅ 已保存 ${successCount} 个地图到localStorage`);
+                console.log('localStorage新地图数:', Object.keys(savedMaps).length);
+            } catch (err) {
+                console.error('❌ 保存到localStorage失败:', err);
+                alert('保存失败: localStorage空间不足或其他错误');
+                return;
+            }
+        }
+
+        // 批量添加到关卡列表
+        importedMaps.forEach(mapData => {
+            this.addCustomMapToLevels(mapData);
+        });
+
+        console.log(`=== 批量导入完成 ===`);
+        console.log(`成功: ${successCount} 个, 失败: ${failCount} 个`);
+
+        // 显示导入结果
+        const successMessage = importedMaps.length > 0 ?
+            `\n\n成功导入的地图:\n${importedMaps.map(m => `• ${m.name}`).join('\n')}` : '';
+
+        const errorDetails = errors.length > 0 ?
+            `\n\n失败详情:\n${errors.slice(0, 10).join('\n')}${errors.length > 10 ? `\n...还有 ${errors.length - 10} 个错误` : ''}` : '';
+
+        alert(`导入完成!\n\n✅ 成功: ${successCount} 个地图\n❌ 失败: ${failCount} 个文件${successMessage}${errorDetails}`);
+
+        // 刷新地图列表
+        this.showSavedMaps();
+    }
+
+    // 读取文件为JSON对象
+    readFileAsJSON(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    resolve(json);
+                } catch (err) {
+                    reject(new Error('JSON解析失败'));
+                }
+            };
+            reader.onerror = () => {
+                reject(new Error('文件读取失败'));
+            };
+            reader.readAsText(file);
+        });
+    }
+
+    // 导入单个地图文件(保留原方法供其他地方调用)
+    importMapFromFile(file) {
+        this.importMapsFromFiles([file]);
     }
 
     // 计算格子数量
@@ -1775,6 +2082,12 @@ class GameController {
 
     // 从关卡列表中删除自定义地图
     deleteCustomLevel(levelId) {
+        const level = this.game.levels.find(l => l.id === levelId);
+        if (level && level.source === 'file') {
+            alert('文件地图无法删除!');
+            return;
+        }
+
         if (confirm('确定要从解谜模式中删除这个自定义地图吗?')) {
             // 从关卡列表中删除
             this.game.levels = this.game.levels.filter(l => l.id !== levelId);
@@ -1787,6 +2100,110 @@ class GameController {
             // 刷新关卡列表
             this.renderLevelList();
         }
+    }
+
+    // 生成关卡预览缩略图
+    generateLevelPreview(level) {
+        if (!level.customBoard) return '';
+
+        const board = level.customBoard;
+        const hexSize = 8;
+        const width = 100;
+        const height = 100;
+        const padding = 10;
+
+        // 计算边界
+        let minQ = Infinity, maxQ = -Infinity;
+        let minR = Infinity, maxR = -Infinity;
+        let cells = [];
+
+        for (let q in board) {
+            const qNum = parseInt(q);
+            minQ = Math.min(minQ, qNum);
+            maxQ = Math.max(maxQ, qNum);
+            for (let r in board[q]) {
+                const rNum = parseInt(r);
+                minR = Math.min(minR, rNum);
+                maxR = Math.max(maxR, rNum);
+                cells.push({q: qNum, r: rNum, value: board[q][r]});
+            }
+        }
+
+        // 计算中心偏移
+        const centerX = (minQ + maxQ) / 2;
+        const centerR = (minR + maxR) / 2;
+
+        // 计算地图的实际像素尺寸
+        let maxX = -Infinity, maxY = -Infinity;
+        let minX = Infinity, minY = Infinity;
+
+        cells.forEach(cell => {
+            const x = hexSize * (3/2 * (cell.q - centerX));
+            const y = hexSize * (Math.sqrt(3)/2 * (cell.q - centerX) + Math.sqrt(3) * (cell.r - centerR));
+            minX = Math.min(minX, x);
+            maxX = Math.max(maxX, x);
+            minY = Math.min(minY, y);
+            maxY = Math.max(maxY, y);
+        });
+
+        // 计算缩放比例,确保地图完全显示在缩略图内
+        const contentWidth = maxX - minX + hexSize * 2;
+        const contentHeight = maxY - minY + hexSize * 2;
+        const scaleX = (width - padding * 2) / contentWidth;
+        const scaleY = (height - padding * 2) / contentHeight;
+        const scale = Math.min(scaleX, scaleY, 1); // 最多放大到1倍
+
+        // 计算偏移以居中
+        const offsetX = (width - contentWidth * scale) / 2 - minX * scale;
+        const offsetY = (height - contentHeight * scale) / 2 - minY * scale;
+
+        // 生成SVG
+        let svgContent = '';
+
+        cells.forEach(cell => {
+            // 计算像素坐标（应用缩放）
+            const x = hexSize * (3/2 * (cell.q - centerX));
+            const y = hexSize * (Math.sqrt(3)/2 * (cell.q - centerX) + Math.sqrt(3) * (cell.r - centerR));
+
+            // 应用缩放和偏移
+            const scaledX = x * scale + offsetX;
+            const scaledY = y * scale + offsetY;
+            const scaledHexSize = hexSize * scale;
+
+            // 获取颜色
+            const colors = {
+                0: '#e8e8e8',
+                1: '#ff6b6b',
+                2: '#4ecdc4',
+                3: '#ffe66d'
+            };
+            const color = colors[cell.value] || '#e8e8e8';
+
+            // 生成六边形路径
+            const hexPoints = [];
+            for (let i = 0; i < 6; i++) {
+                const angle = (Math.PI / 3) * i;
+                const hx = scaledX + scaledHexSize * Math.cos(angle);
+                const hy = scaledY + scaledHexSize * Math.sin(angle);
+                hexPoints.push(`${hx.toFixed(1)},${hy.toFixed(1)}`);
+            }
+
+            const pointsStr = hexPoints.join(' ');
+            svgContent += `<polygon points="${pointsStr}" fill="${color}" stroke="#333" stroke-width="1"/>`;
+
+            // 如果有棋子,绘制圆点
+            if (cell.value > 0) {
+                svgContent += `<circle cx="${scaledX.toFixed(1)}" cy="${scaledY.toFixed(1)}" r="${scaledHexSize/2}" fill="${color}" stroke="#333" stroke-width="1"/>`;
+            }
+        });
+
+        return `
+            <div class="level-preview">
+                <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+                    ${svgContent}
+                </svg>
+            </div>
+        `;
     }
 }
 

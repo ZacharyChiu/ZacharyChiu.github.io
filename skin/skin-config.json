@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "skins": {
+    "player1": {
+      "file": "player01.png",
+      "scale": 0.7
+    },
+    "player2": {
+      "file": "",
+      "scale": 0.7
+    },
+    "player3": {
+      "file": "",
+      "scale": 0.7
+    }
+  }
+}

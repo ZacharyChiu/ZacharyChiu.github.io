@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #app {
@@ -163,6 +163,23 @@ h1 {
 
 .level-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level-preview {
+    width: 100px;
+    height: 100px;
+    background: #2c3e50;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.level-preview svg {
+    width: 100%;
+    height: 100%;
 }
 
 .custom-badge {
@@ -378,8 +395,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    #app {
+        max-height: none;
+        overflow-y: visible;
+    }
+
     .screen {
-        padding: 20px;
+        padding: 15px;
+        max-height: none;
     }
 
     h1 {
@@ -398,10 +425,31 @@ h1 {
     .score-display {
         width: 100%;
         justify-content: center;
+        gap: 10px;
     }
 
     .level-list {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        max-height: 50vh;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    #game-canvas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .turn-indicator {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .player-score {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }
 
